@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包1npm install hexo-cli -g">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://example.com/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/7.png">
 <meta property="og:image" content="http://example.com/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/8.png">
 <meta property="article:published_time" content="2023-02-23T14:17:31.624Z">
-<meta property="article:modified_time" content="2023-02-23T14:06:59.495Z">
+<meta property="article:modified_time" content="2023-03-01T07:07:25.030Z">
 <meta property="article:author" content="毛">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -204,10 +204,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-02-23 22:17:31 / 修改时间：22:06:59" itemprop="dateCreated datePublished" datetime="2023-02-23T22:17:31+08:00">2023-02-23</time>
+              <time title="创建时间：2023-02-23 22:17:31" itemprop="dateCreated datePublished" datetime="2023-02-23T22:17:31+08:00">2023-02-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-01 15:07:25" itemprop="dateModified" datetime="2023-03-01T15:07:25+08:00">2023-03-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -251,7 +257,7 @@
 <p>一开始我是没有global&#x3D;？？？ 的</p>
 <p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/6.png" alt="npm配置信息"></p>
 <p><strong>2.查看全局下，是否有自己安装的包</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>一般看上面那个F盘的图，会在那里</p>
 <p>3.修改npm配置信息，查看 图例1，global属性是否安装到全局，如果你的这里是true，那么，就算你安装一个包时，没有写-g，它也会自动将你的包安装到全局！ — 修改配置信息 方法一：命令行输入</p>
@@ -338,8 +344,8 @@
       <i class="fa fa-chevron-left"></i> PyQt5
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/23/maven/" rel="next" title="maven 找不到依赖项 javax.servlet:servlet-api:${servlet-api.version}">
-      maven 找不到依赖项 javax.servlet:servlet-api:${servlet-api.version} <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/" rel="next" title="mysql报错ERROR 1045 (28000) Access denied for user 'root'@'localhost' (using password:NO)">
+      mysql报错ERROR 1045 (28000) Access denied for user 'root'@'localhost' (using password:NO) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -420,7 +426,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -433,7 +439,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -492,7 +498,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.5k字</span>
+  <span class="post-count">博客全站共5.2k字</span>
 </div>
 
 
