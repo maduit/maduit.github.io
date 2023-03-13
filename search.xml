@@ -83,7 +83,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#x32;&#x35;&#53;&#x37;&#55;&#57;&#x34;&#x30;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#x38;&#x32;&#x35;&#53;&#x37;&#55;&#57;&#x34;&#x30;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#x32;&#x35;&#x35;&#55;&#55;&#57;&#52;&#48;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;">&#x38;&#x32;&#x35;&#x35;&#55;&#55;&#57;&#52;&#48;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -329,11 +329,11 @@
     
     
     <entry>
-      <title>回调函数</title>
-      <link href="/2023/02/23/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
-      <url>/2023/02/23/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</url>
+      <title>匿名函数</title>
+      <link href="/2023/02/23/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
+      <url>/2023/02/23/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
       
-        <content type="html"><![CDATA[<p><em><strong>回调函数</strong></em></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先定义一个函数，用来做短时间或无法脱身的事情，同步</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sdo</span>(<span class="params">does</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(does);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 在定义以恶搞函数，用来做长时间等待的事情，异步</span></span><br><span class="line"><span class="comment">//用回调解决这个问题</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ldo</span>(<span class="params">doing,callback</span>)&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(doing);</span><br><span class="line">        <span class="title function_">callback</span>(<span class="string">&#x27;吃鸡&#x27;</span>)</span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 接下来要开始迫害只因</span></span><br><span class="line"><span class="title function_">sdo</span>(<span class="string">&#x27;买鸡&#x27;</span>)</span><br><span class="line"><span class="title function_">sdo</span>(<span class="string">&#x27;杀鸡&#x27;</span>)</span><br><span class="line"><span class="title function_">ldo</span>(<span class="string">&#x27;炖鸡&#x27;</span>,sdo)<span class="comment">//===&gt;函数作为参数</span></span><br><span class="line"><span class="comment">// sdo(&#x27;吃鸡&#x27;)</span></span><br><span class="line"><span class="comment">// 会发现不对劲</span></span><br><span class="line">       </span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><strong>匿名函数</strong></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.表达式赋值给变量来使用</span></span><br><span class="line"><span class="keyword">var</span> fa =<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">20</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fa</span>();</span><br><span class="line"><span class="comment">// 2.当作函数来被调用</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">30</span>);&#125;,<span class="number">1000</span>);</span><br><span class="line"><span class="comment">// 3.通过函数嵌套当成闭包里的返回函数来调用</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fb</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">40</span>);&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> fm=<span class="title function_">fb</span>();</span><br><span class="line"><span class="title function_">fm</span>();</span><br><span class="line"><span class="comment">// 4.函数自己调用自己，也就是自调用。</span></span><br><span class="line">!<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">50</span>);&#125;();</span><br><span class="line"><span class="comment">//匿名函数智能被调用或是自调用。</span></span><br><span class="line"><span class="comment">//带参数的匿名函数自调用</span></span><br><span class="line">!<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(a+b);&#125;(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -354,11 +354,11 @@
     
     
     <entry>
-      <title>匿名函数</title>
-      <link href="/2023/02/23/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
-      <url>/2023/02/23/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+      <title>回调函数</title>
+      <link href="/2023/02/23/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
+      <url>/2023/02/23/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</url>
       
-        <content type="html"><![CDATA[<p><strong>匿名函数</strong></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.表达式赋值给变量来使用</span></span><br><span class="line"><span class="keyword">var</span> fa =<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">20</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fa</span>();</span><br><span class="line"><span class="comment">// 2.当作函数来被调用</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">30</span>);&#125;,<span class="number">1000</span>);</span><br><span class="line"><span class="comment">// 3.通过函数嵌套当成闭包里的返回函数来调用</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fb</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">40</span>);&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> fm=<span class="title function_">fb</span>();</span><br><span class="line"><span class="title function_">fm</span>();</span><br><span class="line"><span class="comment">// 4.函数自己调用自己，也就是自调用。</span></span><br><span class="line">!<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">50</span>);&#125;();</span><br><span class="line"><span class="comment">//匿名函数智能被调用或是自调用。</span></span><br><span class="line"><span class="comment">//带参数的匿名函数自调用</span></span><br><span class="line">!<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(a+b);&#125;(<span class="number">40</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><em><strong>回调函数</strong></em></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先定义一个函数，用来做短时间或无法脱身的事情，同步</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sdo</span>(<span class="params">does</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(does);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 在定义以恶搞函数，用来做长时间等待的事情，异步</span></span><br><span class="line"><span class="comment">//用回调解决这个问题</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ldo</span>(<span class="params">doing,callback</span>)&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(doing);</span><br><span class="line">        <span class="title function_">callback</span>(<span class="string">&#x27;吃鸡&#x27;</span>)</span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 接下来要开始迫害只因</span></span><br><span class="line"><span class="title function_">sdo</span>(<span class="string">&#x27;买鸡&#x27;</span>)</span><br><span class="line"><span class="title function_">sdo</span>(<span class="string">&#x27;杀鸡&#x27;</span>)</span><br><span class="line"><span class="title function_">ldo</span>(<span class="string">&#x27;炖鸡&#x27;</span>,sdo)<span class="comment">//===&gt;函数作为参数</span></span><br><span class="line"><span class="comment">// sdo(&#x27;吃鸡&#x27;)</span></span><br><span class="line"><span class="comment">// 会发现不对劲</span></span><br><span class="line">       </span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -467,31 +467,6 @@
     
     
     <entry>
-      <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
-      <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
-      <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
-      
-        <content type="html"><![CDATA[<h2 id="ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO"><a href="#ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO" class="headerlink" title="ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)"></a>ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)</h2><span id="more"></span><p><img src="/images/jeecgsql/1.png" alt="1672729110392"></p><p><img src="/images/jeecgsql/2.png" alt="1672729176810"></p><p>E:\jeecg\jeecg-boot-master\db\jeecgboot-mysql-5.7.sql</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2023 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>maven 找不到依赖项 javax.servlet:servlet-api:${servlet-api.version}</title>
       <link href="/2023/02/23/maven/"/>
       <url>/2023/02/23/maven/</url>
@@ -509,6 +484,31 @@
         <tags>
             
             <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
+      <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
+      <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO"><a href="#ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO" class="headerlink" title="ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)"></a>ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)</h2><span id="more"></span><p><img src="/images/jeecgsql/1.png" alt="1672729110392"></p><p><img src="/images/jeecgsql/2.png" alt="1672729176810"></p><p>E:\jeecg\jeecg-boot-master\db\jeecgboot-mysql-5.7.sql</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
             
         </tags>
       
