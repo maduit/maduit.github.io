@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>软件体系结构</title>
+      <link href="/2023/03/15/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+      <url>/2023/03/15/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<h2 id="软件体系结构"><a href="#软件体系结构" class="headerlink" title="软件体系结构"></a>软件体系结构</h2><p>​    软件体系结构是有关软件系统如何组织的描述。体系结构影响了系统的性能、安全性和可用性。软件工程师可以在给定的体系结构类型中使用不同的体系结构风格和模式，而不同的模式描述了不同的系统类别、构建、连接件及约束。</p><p>​    软件体系结构脱胎于软件工程．但其形成同时借鉴了计算机体系结构和网络体系结构中很多宝贵的思想和方法。最近几年软件体系结构研究完全独立于软件工程的研究，成为计算机科学的一个最新的研究方向和独立学科分支。</p><p>软件体系结构是对系统的高层设计，是从一个较高的层次来考虑组成系统的构建、构建之间的连接关系，以及系统需满足的约束等。设计模式可以用于软件体系结构的设计，以实现体系结构级的设计复用。用于软件体系结构的设计模式通常称为架构模式（Architectural Pattern）或体系机构风格（Architectural Style）。</p><p>在《Pattern - Oriented Software Architecture》第一卷中，Buschmann等人根据问题的规模或抽象层次将软件设计模式分为三个层次：架构模式（Architectural Patterns）、设计模式（Design Patterns）和习惯用法（Idioms）。</p><p>（1）架构模式</p><p>架构模式是一种高层模式，用于描述系统级的结构组成、相互关系及相关约束。对架构模式的选择是最基本的设计决策，将决定系统的基本架构，并决定后续的设计及开发活动。</p><p>例如，模型 - 视图 - 控制器（Model - View - Controller，MVC）即是一种架构模式，该模式给出了一种交互式系统的架构设计，该模式的主要思想式实现业务逻辑、用户界面的分离。</p><p>（2）设计模式</p><p>设计模式是中层模式，是针对系统局部设计问题给出的解决方案。一般情况下，人们所讲的设计模式都是指中层模式。设计模式的选择对系统的基本架构没有影响，但在实现架构模式时，则可能采用多种设计模式。</p><p>例如，在实现MVC架构模式时，采用的主要设计模式有观察者模式、组合模式和策略模式等。</p><p>（3）习惯用法</p><p>架构模式和设计模式被认为是与具体编程语言无关的，而习惯用法则通常被认为是与具体编程语言相关的一种低层模式。习惯用法给出的解决方案通常与具体编程语言的某种语法机制相关。</p><p>本课程中，软件体系结构就是指架构模式，可以认为是：软件体系结构 &#x3D; 构件 + 连接件 + 约束 。</p><p><img src="https://pic4.zhimg.com/v2-8c98ec4b5d9d5283ff4d1ad92766de57_r.jpg" alt="preview"></p><p>构件</p><p>构件是具有某种功能的可复用的软件结构单元，表示系统中主要的计算元素 和 数据存储。</p><p>构件是一个抽象的概念，在程序中可以指程序函数、模块、对象、类等。</p><p><img src="https://pic2.zhimg.com/80/v2-b666558008dc4ff3329ca63e35a6e225_720w.jpg" alt="img"></p><p>连接件</p><p>连接是构件间建立和维护行为关联与信息传递的途径。连接包含下面两种要素：</p><p>其中，机制指的实际中的消息传递方式。</p><p>而协议则决定了 消息的语义理解。</p><p><img src="https://pic2.zhimg.com/80/v2-1bb5a6d90757c84a0b4009b3f955fd8d_720w.jpg" alt="img"></p><p>连接件表示构件之间的交互并实现构件之间的连接。</p><p><img src="https://pic4.zhimg.com/80/v2-17f01a5446ba515aca87b563de50f7cb_720w.jpg" alt="img"></p><h2 id="软件体系结构目标"><a href="#软件体系结构目标" class="headerlink" title="软件体系结构目标"></a>软件体系结构目标</h2><p>为了更好理解后面的软件体系结构涉及的原则和体系结构风格，请牢记这些目标，时不时的对照后面的内容回顾这些目标。</p><p>所有的设计原则等理论基本上都可以映射到下面一个或几个目标上。</p><p><img src="https://pic4.zhimg.com/80/v2-97de430bbe1b18afbc7dd681c511ba33_720w.jpg" alt="img"></p><h2 id="体系结构的发展"><a href="#体系结构的发展" class="headerlink" title="体系结构的发展"></a>体系结构的发展</h2><p>现在软件的复杂性及多变性，导致了软件粒度越来越粗，越来越开放。</p><p><img src="https://pic3.zhimg.com/80/v2-d6fe8623f78de2cb0ec0d98660466a52_720w.jpg" alt="img"></p><h2 id="下面是常见的软件体系结构"><a href="#下面是常见的软件体系结构" class="headerlink" title="下面是常见的软件体系结构"></a>下面是常见的软件体系结构</h2><p><img src="https://p.ananas.chaoxing.com/star3/origin/fc0a0346e6f22b3d5912a3eb3595edb3.png" alt="11.png"></p><h2 id="软件体系结构与软件设计模式的区别"><a href="#软件体系结构与软件设计模式的区别" class="headerlink" title="软件体系结构与软件设计模式的区别"></a>软件体系结构与软件设计模式的区别</h2><p><img src="https://p.ananas.chaoxing.com/star3/origin/5c7bd1a7d311913382090a50948622ac.png" alt="Design-vs-Patterns-SAP.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>设计模式概述</title>
       <link href="/2023/03/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(1)/"/>
       <url>/2023/03/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(1)/</url>
@@ -108,7 +133,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#50;&#53;&#53;&#55;&#55;&#57;&#x34;&#48;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x38;&#50;&#53;&#53;&#55;&#55;&#57;&#x34;&#48;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#x32;&#53;&#53;&#x37;&#x37;&#x39;&#x34;&#x30;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#x38;&#x32;&#53;&#53;&#x37;&#x37;&#x39;&#x34;&#x30;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -404,31 +429,6 @@
     
     
     <entry>
-      <title>箭头函数</title>
-      <link href="/2023/02/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
-      <url>/2023/02/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p><strong>箭头函数</strong></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.箭头函数常见写法</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun1</span>=(<span class="params">a,b</span>)=&gt;&#123;<span class="keyword">return</span> a+b;&#125;</span><br><span class="line"><span class="comment">// 2.箭头函数没有参数，那么也要写括号</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun2</span>=(<span class="params"></span>)=&gt;&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你好&#x27;</span>);&#125;</span><br><span class="line"><span class="comment">// 3.如果只有一个参数，那么括号可以省略</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun3</span>=name=&gt;&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好<span class="subst">$&#123;name&#125;</span>`</span>);&#125;</span><br><span class="line"><span class="comment">// 4.如果函数体只有一句执行代码，那么可以省略大括号，同时代码默认会被ruturn出去</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun4</span>=name=&gt;<span class="string">`你好<span class="subst">$&#123;name&#125;</span>`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fun4</span>(<span class="string">&#x27;小明&#x27;</span>));</span><br><span class="line"><span class="comment">// 5.箭头函数没有自己的this，他的this是来自于上层作用域的this</span></span><br><span class="line"> <span class="keyword">let</span> obj=&#123;</span><br><span class="line">    <span class="title function_">fun5</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fun5:&#x27;</span>,<span class="variable language_">this</span>);&#125;,</span><br><span class="line">    <span class="attr">fun6</span>:<span class="function">()=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fun6:&#x27;</span>,<span class="variable language_">this</span>);&#125;</span><br><span class="line"> &#125;</span><br><span class="line"> obj.<span class="title function_">fun5</span>();</span><br><span class="line"> obj.<span class="title function_">fun6</span>();</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2022 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> js </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>解决bash hexo command not found</title>
       <link href="/2023/02/23/%E8%A7%A3%E5%86%B3bash%20hexo%20command%20not%20found/"/>
       <url>/2023/02/23/%E8%A7%A3%E5%86%B3bash%20hexo%20command%20not%20found/</url>
@@ -446,6 +446,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>箭头函数</title>
+      <link href="/2023/02/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
+      <url>/2023/02/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p><strong>箭头函数</strong></p><span id="more"></span><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.箭头函数常见写法</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun1</span>=(<span class="params">a,b</span>)=&gt;&#123;<span class="keyword">return</span> a+b;&#125;</span><br><span class="line"><span class="comment">// 2.箭头函数没有参数，那么也要写括号</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun2</span>=(<span class="params"></span>)=&gt;&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你好&#x27;</span>);&#125;</span><br><span class="line"><span class="comment">// 3.如果只有一个参数，那么括号可以省略</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun3</span>=name=&gt;&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`你好<span class="subst">$&#123;name&#125;</span>`</span>);&#125;</span><br><span class="line"><span class="comment">// 4.如果函数体只有一句执行代码，那么可以省略大括号，同时代码默认会被ruturn出去</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">fun4</span>=name=&gt;<span class="string">`你好<span class="subst">$&#123;name&#125;</span>`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fun4</span>(<span class="string">&#x27;小明&#x27;</span>));</span><br><span class="line"><span class="comment">// 5.箭头函数没有自己的this，他的this是来自于上层作用域的this</span></span><br><span class="line"> <span class="keyword">let</span> obj=&#123;</span><br><span class="line">    <span class="title function_">fun5</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fun5:&#x27;</span>,<span class="variable language_">this</span>);&#125;,</span><br><span class="line">    <span class="attr">fun6</span>:<span class="function">()=&gt;</span>&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fun6:&#x27;</span>,<span class="variable language_">this</span>);&#125;</span><br><span class="line"> &#125;</span><br><span class="line"> obj.<span class="title function_">fun5</span>();</span><br><span class="line"> obj.<span class="title function_">fun6</span>();</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2022 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
             
         </tags>
       
@@ -517,6 +542,31 @@
     
     
     <entry>
+      <title>PyQt5</title>
+      <link href="/2023/02/23/pyqt5/"/>
+      <url>/2023/02/23/pyqt5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装PyQt5"><a href="#安装PyQt5" class="headerlink" title="安装PyQt5"></a>安装PyQt5</h2><p>打开Anaconda Promt，切换到对应环境输入：</p><span id="more"></span> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5 -i https://pypi.douban.com/simple</span><br></pre></td></tr></table></figure><h2 id="安装PyQt5-tools"><a href="#安装PyQt5-tools" class="headerlink" title="安装PyQt5-tools"></a>安装PyQt5-tools</h2> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5-tools -i https://pypi.douban.com/simple</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>打开</p><p>Anaconda prompt</p><p><img src="/./images/pyqt5/1.png" alt="1669202006491"></p><p>输入:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PyQt5-tools designer</span><br></pre></td></tr></table></figure><p>它有很多东西</p><p><img src="/./images/pyqt5/2.png" alt="1669202116133"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">designer</span><br><span class="line">installuic</span><br><span class="line">qmlscene</span><br><span class="line">qmltestrunner</span><br></pre></td></tr></table></figure><p>不知道其他是啥（待解决）</p><hr><p><img src="/./images/pyqt5/3.png" alt="1669202186551"></p><p>直接点击创建（main window）</p><p><img src="/./images/pyqt5/4.png" alt="1669202245388"></p><p>随便拖两个button上去</p><p><img src="/./images/pyqt5/21.png" alt="1669202300112"></p><p>另存为</p><p><img src="/./images/pyqt5/5.png" alt="1669202348711"></p><p>然后回到anaconda那个窗口，</p><p>我们要把这个.ui文件转化为py文件</p><p>方法一：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyQt5.uic.pyuic test.ui -o test.py</span><br></pre></td></tr></table></figure><p><img src="/./images/pyqt5/6.png" alt="1669202702551"></p><p>要切换到相对应的文件夹路径下再运行</p><p><img src="/./images/pyqt5/7.png" alt="1669202755853"></p><p>已经生成了</p><p>方法二：</p><p>太烦了，不写</p><p>F:\anaconda\EMPYTY\pkgs\pyqt-5.9.2-py39hd77b12b_6\Library\bin</p><p>大概在这个路径里面</p><p><img src="/./images/pyqt5/7.1.png" alt="1669203475844"></p><p><img src="/./images/pyqt5/7.2.png" alt="1669203905200"></p><p><img src="/./images/pyqt5/7.3.png" alt="1669203924735"></p><p> 很鸡肋，虽然写的前面的那玩意少了点，但是要吧ui移到当前文件夹里面，辣鸡</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyuic5 test.ui -o test.py</span><br></pre></td></tr></table></figure><p>方法三：<br>直接使用扩展程序打开</p><p>pycharm扩展程序（vscode没找到在哪）</p><p><img src="/./images/pyqt5/8.png" alt="1669203187056"></p><p>不太好搞（不想写，没看懂）</p><p>综上，用方法一</p><p>1.水平布局</p><p><img src="/./images/pyqt5/9.png" alt="1669204341946"></p><p><img src="/./images/pyqt5/10.png" alt="1669204535028"></p><p>回到vscode里面</p><p><img src="/./images/pyqt5/11.png" alt="1669204935069"></p><p><img src="/./images/pyqt5/12.png" alt="1669205119299"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> shuiping</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication,QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建QApplication类的实例</span></span><br><span class="line">app=QApplication(sys.argv)</span><br><span class="line"><span class="comment">#创建一个窗口</span></span><br><span class="line">mainWindow=QMainWindow()</span><br><span class="line"><span class="comment">#向主窗口添加控件</span></span><br><span class="line">ui=shuiping.Ui_MainWindow()</span><br><span class="line">ui.setupUi(mainWindow)</span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainWindow.show()</span><br><span class="line"><span class="comment"># 进入程序的主循环、并通过exit函数确保主循环安全结束</span></span><br><span class="line">sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><p>表单布局</p><p><img src="/./images/pyqt5/13.png" alt="1669206548415"></p><p>垂直布局</p><p><img src="/./images/pyqt5/14.png" alt="1669206597151"></p><p>栅格布局</p><p><img src="/./images/pyqt5/15.png" alt="1669206640854"></p><p>尺寸策略</p><p><img src="/./images/pyqt5/16.png" alt="1669210040330"></p><p>伙伴关系</p><p><img src="/./images/pyqt5/17.png" alt="1669210466222"></p><p>tab顺序</p><p><img src="/./images/pyqt5/18.png" alt="1669210672111"></p><p><img src="/./images/pyqt5/19.png" alt="1669210689346"></p><p>编辑信号和槽</p><p><img src="/./images/pyqt5/22.png" alt="1669211232251"></p><p><img src="/./images/pyqt5/20.png" alt="1669211749552"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2022 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PyQt5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
       <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
       <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
@@ -559,31 +609,6 @@
         <tags>
             
             <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>PyQt5</title>
-      <link href="/2023/02/23/pyqt5/"/>
-      <url>/2023/02/23/pyqt5/</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装PyQt5"><a href="#安装PyQt5" class="headerlink" title="安装PyQt5"></a>安装PyQt5</h2><p>打开Anaconda Promt，切换到对应环境输入：</p><span id="more"></span> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5 -i https://pypi.douban.com/simple</span><br></pre></td></tr></table></figure><h2 id="安装PyQt5-tools"><a href="#安装PyQt5-tools" class="headerlink" title="安装PyQt5-tools"></a>安装PyQt5-tools</h2> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5-tools -i https://pypi.douban.com/simple</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>打开</p><p>Anaconda prompt</p><p><img src="/./images/pyqt5/1.png" alt="1669202006491"></p><p>输入:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PyQt5-tools designer</span><br></pre></td></tr></table></figure><p>它有很多东西</p><p><img src="/./images/pyqt5/2.png" alt="1669202116133"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">designer</span><br><span class="line">installuic</span><br><span class="line">qmlscene</span><br><span class="line">qmltestrunner</span><br></pre></td></tr></table></figure><p>不知道其他是啥（待解决）</p><hr><p><img src="/./images/pyqt5/3.png" alt="1669202186551"></p><p>直接点击创建（main window）</p><p><img src="/./images/pyqt5/4.png" alt="1669202245388"></p><p>随便拖两个button上去</p><p><img src="/./images/pyqt5/21.png" alt="1669202300112"></p><p>另存为</p><p><img src="/./images/pyqt5/5.png" alt="1669202348711"></p><p>然后回到anaconda那个窗口，</p><p>我们要把这个.ui文件转化为py文件</p><p>方法一：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyQt5.uic.pyuic test.ui -o test.py</span><br></pre></td></tr></table></figure><p><img src="/./images/pyqt5/6.png" alt="1669202702551"></p><p>要切换到相对应的文件夹路径下再运行</p><p><img src="/./images/pyqt5/7.png" alt="1669202755853"></p><p>已经生成了</p><p>方法二：</p><p>太烦了，不写</p><p>F:\anaconda\EMPYTY\pkgs\pyqt-5.9.2-py39hd77b12b_6\Library\bin</p><p>大概在这个路径里面</p><p><img src="/./images/pyqt5/7.1.png" alt="1669203475844"></p><p><img src="/./images/pyqt5/7.2.png" alt="1669203905200"></p><p><img src="/./images/pyqt5/7.3.png" alt="1669203924735"></p><p> 很鸡肋，虽然写的前面的那玩意少了点，但是要吧ui移到当前文件夹里面，辣鸡</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyuic5 test.ui -o test.py</span><br></pre></td></tr></table></figure><p>方法三：<br>直接使用扩展程序打开</p><p>pycharm扩展程序（vscode没找到在哪）</p><p><img src="/./images/pyqt5/8.png" alt="1669203187056"></p><p>不太好搞（不想写，没看懂）</p><p>综上，用方法一</p><p>1.水平布局</p><p><img src="/./images/pyqt5/9.png" alt="1669204341946"></p><p><img src="/./images/pyqt5/10.png" alt="1669204535028"></p><p>回到vscode里面</p><p><img src="/./images/pyqt5/11.png" alt="1669204935069"></p><p><img src="/./images/pyqt5/12.png" alt="1669205119299"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> shuiping</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication,QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建QApplication类的实例</span></span><br><span class="line">app=QApplication(sys.argv)</span><br><span class="line"><span class="comment">#创建一个窗口</span></span><br><span class="line">mainWindow=QMainWindow()</span><br><span class="line"><span class="comment">#向主窗口添加控件</span></span><br><span class="line">ui=shuiping.Ui_MainWindow()</span><br><span class="line">ui.setupUi(mainWindow)</span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainWindow.show()</span><br><span class="line"><span class="comment"># 进入程序的主循环、并通过exit函数确保主循环安全结束</span></span><br><span class="line">sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><p>表单布局</p><p><img src="/./images/pyqt5/13.png" alt="1669206548415"></p><p>垂直布局</p><p><img src="/./images/pyqt5/14.png" alt="1669206597151"></p><p>栅格布局</p><p><img src="/./images/pyqt5/15.png" alt="1669206640854"></p><p>尺寸策略</p><p><img src="/./images/pyqt5/16.png" alt="1669210040330"></p><p>伙伴关系</p><p><img src="/./images/pyqt5/17.png" alt="1669210466222"></p><p>tab顺序</p><p><img src="/./images/pyqt5/18.png" alt="1669210672111"></p><p><img src="/./images/pyqt5/19.png" alt="1669210689346"></p><p>编辑信号和槽</p><p><img src="/./images/pyqt5/22.png" alt="1669211232251"></p><p><img src="/./images/pyqt5/20.png" alt="1669211749552"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2022 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PyQt5 </tag>
             
         </tags>
       
