@@ -256,6 +256,460 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/Python%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiao.png">
+      <meta itemprop="name" content="毛">
+      <meta itemprop="description" content="在梦里啥都有">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡觉万岁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/20/Python%E7%B1%BB/" class="post-title-link" itemprop="url">Python类</a>
+        </h2>
+
+        <div class="post-meta">
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-20 12:58:38 / 修改时间：15:04:48" itemprop="dateCreated datePublished" datetime="2023-03-20T12:58:38+08:00">2023-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Python类"><a href="#Python类" class="headerlink" title="Python类"></a>Python类</h1><h3 id="类-class-和-对象-object"><a href="#类-class-和-对象-object" class="headerlink" title="类(class) 和 对象(object)"></a>类(class) 和 对象(object)</h3><p>类：创建对象的模板，定义对象将会拥有的属性和函数</p>
+<p>__init__函数：每个类必须定义的函数，对象创建语句时自动执行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">myday</span>: <span class="comment">#建立一个类模板</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">def</span> <span class="title function_">__init__</span>():</span><br><span class="line"></span><br><span class="line">          .....</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">day1 = myday()      <span class="comment">#创建一个myday类的对象 </span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>python类<br>类名：mayday<br>属性：name和emotion<br>函数：<strong>init</strong>函数，wake函数，eat函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 类(class)</span></span><br><span class="line"><span class="keyword">class</span>  <span class="title class_">myday</span>:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):             <span class="comment">#每个类必须定义(def)    __init__函数，每个函数第一参数都是self</span></span><br><span class="line">               self.name = <span class="string">&quot;Xiao Ming&quot;</span>  <span class="comment">#myday对象拥有属性name和emotion</span></span><br><span class="line">               self.emotion = <span class="string">&quot;happy&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wake</span>(<span class="params">self,event</span>):</span><br><span class="line">               <span class="keyword">if</span> event == <span class="string">&quot;上课&quot;</span>:</span><br><span class="line">                     self.emotion = <span class="string">&quot;still happy&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self, food</span>):</span><br><span class="line">               <span class="keyword">if</span> food == <span class="string">&quot;牛肉&quot;</span>:</span><br><span class="line">                     self.emotion = <span class="string">&quot;more happy&quot;</span></span><br><span class="line">        <span class="comment">#def __eq__(self,other):</span></span><br><span class="line">            <span class="comment">#return self.name == other.name</span></span><br><span class="line">day2 = myday()</span><br><span class="line"><span class="comment">#创建对象时会自动执行__init__方法</span></span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line"><span class="built_in">print</span>(day2.name)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>__init__函数添加参数  </code></p>
+<p><code> 创建对象时传入self之后的参数</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">myday</span>:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,emotion</span>):                                                                 </span><br><span class="line">            self.emotion = emotion  <span class="comment">#定义对象属性“self.emotion”，将这个属性赋值为函数传入的参数“emotion”</span></span><br><span class="line">            self.name = name</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wake</span>(<span class="params">self,event</span>):</span><br><span class="line">            <span class="keyword">if</span> event == <span class="string">&quot;上课&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;still happy&quot;</span></span><br><span class="line">    </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self, food</span>):</span><br><span class="line">            <span class="keyword">if</span> food == <span class="string">&quot;牛肉&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;more happy&quot;</span></span><br><span class="line">        <span class="comment">#def __eq__(self,other):</span></span><br><span class="line">            <span class="comment">#return self.name == other.name</span></span><br><span class="line">day2 = myday(<span class="string">&quot;me&quot;</span>,<span class="string">&quot;very happy&quot;</span>)</span><br><span class="line"><span class="comment">#创建对象时会自动执行__init__函数</span></span><br><span class="line"><span class="built_in">print</span>(day2.name)</span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">myday</span>:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,emotion</span>):                                                                 </span><br><span class="line">            self.emotion = emotion  <span class="comment">#定义对象属性“self.emotion”，将这个属性赋值为函数传入的参数“emotion”</span></span><br><span class="line">            self.name = name</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wake</span>(<span class="params">self,event</span>):</span><br><span class="line">            <span class="keyword">if</span> event == <span class="string">&quot;上课&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;still happy&quot;</span></span><br><span class="line">    </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self, food</span>):</span><br><span class="line">            <span class="keyword">if</span> food == <span class="string">&quot;牛肉&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;more happy&quot;</span></span><br><span class="line">        <span class="comment">#def __eq__(self,other):</span></span><br><span class="line">            <span class="comment">#return self.name == other.name</span></span><br><span class="line">day2 = myday(<span class="string">&quot;me&quot;</span>,<span class="string">&quot;very happy&quot;</span>)</span><br><span class="line"><span class="comment">#调用对象函数时，从self之后的参数开始传入</span></span><br><span class="line">day2.eat(<span class="string">&quot;jiaozi&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line">day2.eat(<span class="string">&quot;牛肉&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="任务：编写一个类继承myday类"><a href="#任务：编写一个类继承myday类" class="headerlink" title="任务：编写一个类继承myday类"></a>任务：编写一个类继承myday类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">myday</span>:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,emotion</span>):                                                                 </span><br><span class="line">            self.emotion = emotion  <span class="comment">#定义对象属性“self.emotion”，将这个属性赋值为函数传入的参数“emotion”</span></span><br><span class="line">            self.name = name</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wake</span>(<span class="params">self,event</span>):</span><br><span class="line">            <span class="keyword">if</span> event == <span class="string">&quot;上课&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;still happy&quot;</span></span><br><span class="line">    </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self, food</span>):</span><br><span class="line">            <span class="keyword">if</span> food == <span class="string">&quot;牛肉&quot;</span>:</span><br><span class="line">                self.emotion = <span class="string">&quot;more happy&quot;</span></span><br><span class="line">        <span class="comment">#def __eq__(self,other):</span></span><br><span class="line">            <span class="comment">#return self.name == other.name</span></span><br><span class="line">day2 = myday(<span class="string">&quot;me&quot;</span>,<span class="string">&quot;very happy&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建对象时，程序会自动执行__init__函数</span></span><br><span class="line">day2.eat(<span class="string">&quot;jiaozi&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line">day2.eat(<span class="string">&quot;牛肉&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(day2.emotion)</span><br><span class="line"></span><br><span class="line"><span class="comment">#类的继承     和     函数重写</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">night</span>(<span class="title class_ inherited__">myday</span>): <span class="comment">#night类继承myday类</span></span><br><span class="line">    	<span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">       		 self.emotion = <span class="string">&quot;nice&quot;</span></span><br><span class="line">       		 self.name = <span class="string">&quot;me&quot;</span></span><br><span class="line"> 	   <span class="keyword">def</span> <span class="title function_">play</span>(<span class="params">self</span>):</span><br><span class="line">       		 self.emotion = <span class="string">&quot;so nice&quot;</span></span><br><span class="line">night1 = night()</span><br><span class="line">night1.eat(<span class="string">&quot;羊肉&quot;</span>)  <span class="comment">#night继承myday类除__init__之外的函数</span></span><br><span class="line"><span class="built_in">print</span>(night1.emotion)</span><br><span class="line">night1.eat(<span class="string">&quot;牛肉&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(night1.emotion)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="一个类是否等于另一个类？"><a href="#一个类是否等于另一个类？" class="headerlink" title="一个类是否等于另一个类？"></a><strong>一个类是否等于另一个类？</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">day1 = myday(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;happy&quot;</span>)</span><br><span class="line">day2 = myday(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;happy&quot;</span>)</span><br><span class="line"></span><br><span class="line">day1.name == day2.name   <span class="comment">#True or False</span></span><br><span class="line">day1 == day2    <span class="comment">#True or False?</span></span><br><span class="line"><span class="comment">#（如果我们在类里定义一个__eq__函数，当我们执行 day1 == day2语句的时候，程序会自动执行__eq__函数）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/1.png" alt="1679290854192"></p>
+<h3 id="多线程开发案例"><a href="#多线程开发案例" class="headerlink" title="多线程开发案例"></a><strong>多线程开发案例</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestThread</span>(threading.Thread):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, para=<span class="string">&#x27;hi&#x27;</span>, sleep=<span class="number">3</span></span>):</span><br><span class="line">         <span class="built_in">super</span>().__init__()</span><br><span class="line">         self.para = para</span><br><span class="line">         self.sleep = sleep</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">         <span class="string">&quot;&quot;&quot;线程内容&quot;&quot;&quot;</span></span><br><span class="line">         time.sleep(self.sleep)</span><br><span class="line">         <span class="built_in">print</span>(self.para)</span><br><span class="line"></span><br><span class="line">thread_hi = TestThread()</span><br><span class="line">thread_hello = TestThread(<span class="string">&#x27;hello&#x27;</span>, <span class="number">1</span>)</span><br><span class="line"> <span class="comment"># 启动线程</span></span><br><span class="line">thread_hi.start()</span><br><span class="line">thread_hello.start()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="任务！：按照如下描述定义一个类，代表一个企业"><a href="#任务！：按照如下描述定义一个类，代表一个企业" class="headerlink" title="任务！：按照如下描述定义一个类，代表一个企业"></a>任务！：按照如下描述定义一个类，代表一个企业</h3><p>class company: init函数：定义资金（money)属性，产品(product)属性和价格（price）属性</p>
+<p>register函数：公司注册，修改资金属性</p>
+<p>produce函数：制造，修改资金属性，修改产品属性</p>
+<p>sale函数：销售，修改资金属性和产品属性</p>
+<p>research函数：研发，修改资金属性和价格属性</p>
+<ul>
+<li>任务！：定义另一个类，继承company类，重写research函数（子类需要添加至少一个新的函数，并重写至少一个父类的函数。）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">company</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,money,product,price</span>) :</span><br><span class="line">        self.money=money</span><br><span class="line">        self.product=product</span><br><span class="line">        self.price=price</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">register</span>(<span class="params">self,tol_money</span>):<span class="comment">#注册资金</span></span><br><span class="line">        self.money=tol_money</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">produce</span>(<span class="params">self,pro_money,product_num</span>):</span><br><span class="line">        self.money-=pro_money<span class="comment">#生产就减少了</span></span><br><span class="line">        self.product+=product_num<span class="comment">#产品多了</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sale</span>(<span class="params">self,sal_money,product_num</span>):</span><br><span class="line">        self.money+=sal_money<span class="comment">#钱多了</span></span><br><span class="line">        self.product-=product_num<span class="comment">#产品减少了</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">research</span>(<span class="params">self,re_money,re_price</span>):</span><br><span class="line">        self.money-=re_money<span class="comment">#钱减少了</span></span><br><span class="line">        self.price+=re_price<span class="comment">#价格上去了</span></span><br><span class="line">company1=company(<span class="string">&quot;1000&quot;</span>,<span class="string">&quot;机器&quot;</span>,<span class="string">&quot;100/2&quot;</span>)</span><br><span class="line">company1.register(<span class="string">&quot;5000&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(company1.money)</span><br></pre></td></tr></table></figure>
+
+<p>research函数：研发，修改资金属性和价格属性，产品属性</p>
+<p>invert函数:投资，修改金钱属性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BigCompany</span>(<span class="title class_ inherited__">company</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,money,product,price</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(money,product,price)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">research</span>(<span class="params">self,re_money,re_price,re_prodcut</span>):</span><br><span class="line">        self.money=re_money<span class="comment">#钱减少了</span></span><br><span class="line">        self.price+=re_price<span class="comment">#价格上去了</span></span><br><span class="line">        self.product+=re_prodcut<span class="comment">#产品多了</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inverst</span>(<span class="params">self,invstment_money</span>):</span><br><span class="line">        self.money-=invstment_money</span><br><span class="line"></span><br><span class="line">company2=BigCompany(<span class="number">7000</span>,<span class="number">2</span>,<span class="number">50</span>)</span><br><span class="line">company2.research(<span class="number">8000</span>,<span class="number">80</span>,<span class="number">90</span>)</span><br><span class="line">company2.inverst(<span class="number">908070</span>)</span><br><span class="line"><span class="built_in">print</span>(company2.money)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/17/%E5%A6%82%E4%BD%95%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%BC%96%E8%AF%91C++/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiao.png">
+      <meta itemprop="name" content="毛">
+      <meta itemprop="description" content="在梦里啥都有">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡觉万岁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/17/%E5%A6%82%E4%BD%95%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%BC%96%E8%AF%91C++/" class="post-title-link" itemprop="url">如何在Linux系统下编译C++</a>
+        </h2>
+
+        <div class="post-meta">
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-17 21:50:45 / 修改时间：22:05:29" itemprop="dateCreated datePublished" datetime="2023-03-17T21:50:45+08:00">2023-03-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="如何在Linux系统下编译C"><a href="#如何在Linux系统下编译C" class="headerlink" title="如何在Linux系统下编译C++"></a>如何在Linux系统下编译C++</h1><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一:"></a>方法一:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;hello_word&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/NOI/1.png" alt="1679061064013"></p>
+<p>编译</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc 1.cpp -lstdc++ </span><br></pre></td></tr></table></figure>
+
+<p>生a.out文件</p>
+<p><img src="/images/NOI/2.png" alt="1679061165889"></p>
+<p>运行a.out</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/NOI/3.png" alt="1679061280444"></p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二:"></a>方法二:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;hello_word222&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/NOI/5.png" alt="1679061782953"></p>
+<p>编译</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ 2.cpp -o 2output</span><br></pre></td></tr></table></figure>
+
+<p>运行2output</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./2output</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/17/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiao.png">
+      <meta itemprop="name" content="毛">
+      <meta itemprop="description" content="在梦里啥都有">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡觉万岁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/17/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-17 11:21:38 / 修改时间：22:28:50" itemprop="dateCreated datePublished" datetime="2023-03-17T11:21:38+08:00">2023-03-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 如何在Linux系统下编译C++</span><br><span class="line">tag: linux_c++</span><br><span class="line">categories: 2023</span><br></pre></td></tr></table></figure>
+
+<h1 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h1><ul>
+<li><p><strong>pv 操作 互斥锁</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">P --wait(信号量S)&#123;</span><br><span class="line">	S&lt;=0</span><br><span class="line">	S--			//上锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>成对出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">V --signal(信号量)&#123;</span><br><span class="line">	S++			//开锁</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生产者</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">in</span><span class="params">()</span>,out</span>=();</span><br><span class="line">item butter[n];</span><br><span class="line">semaphore mutex=<span class="number">1</span>,empty=n,full=();<span class="comment">//mutex必须为1 ,empty空位置,full有多少个</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">proceducer</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	producer an item nextp;</span><br><span class="line">	……</span><br><span class="line">	<span class="built_in">wait</span>(empty);       <span class="comment">//enpty--</span></span><br><span class="line">	<span class="built_in">wait</span>(mutex);	   <span class="comment">//上锁</span></span><br><span class="line">	butter[in]=nextp;  <span class="comment">//生产一个</span></span><br><span class="line">	in:=(in+<span class="number">1</span>)%n;      <span class="comment">// 生产一个</span></span><br><span class="line">	<span class="built_in">signal</span>(mutex);	   <span class="comment">//解锁</span></span><br><span class="line">	<span class="built_in">signal</span>(full);      <span class="comment">//full++</span></span><br><span class="line">	&#125;<span class="keyword">while</span>(TRUE)；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>消费者</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">consumer</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		<span class="built_in">wait</span>(full)；      	<span class="comment">//full-1</span></span><br><span class="line">		<span class="built_in">wait</span>(mutex);		<span class="comment">//上锁</span></span><br><span class="line">		nextc=butter[out];  <span class="comment">//消费一个</span></span><br><span class="line">		out=(out+<span class="number">1</span>)%n;		<span class="comment">//消费一个</span></span><br><span class="line">		<span class="built_in">signal</span>(mutex);  	<span class="comment">//解锁</span></span><br><span class="line">		<span class="built_in">signal</span>(empty); 		<span class="comment">//empty++</span></span><br><span class="line">		consumer the item in nextc;</span><br><span class="line">	&#125;<span class="keyword">while</span>(TRUE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">cobegin</span></span><br><span class="line"><span class="function">		<span class="title">proceducer</span><span class="params">()</span></span>;<span class="built_in">consumer</span>();</span><br><span class="line">	coend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1.png" alt="1679017003280"></p>
+<h3 id="第1关：生产者消费者同步控制"><a href="#第1关：生产者消费者同步控制" class="headerlink" title="第1关：生产者消费者同步控制"></a>第1关：生产者消费者同步控制</h3><h4 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h4><p>本关任务：编写生产者消费者同步控制程序。</p>
+<h4 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h4><p>为了完成本关任务，你需要掌握：1.理解生产者消费者同步问题，2.线程的编写方法，3.使用信号量实现线程间同步控制。</p>
+<h5 id="线程并发引起的同步问题"><a href="#线程并发引起的同步问题" class="headerlink" title="线程并发引起的同步问题"></a>线程并发引起的同步问题</h5><p>线程以并发形式运行，当并发的线程间访问共享数据时，会发后争用现象，不进行同步控制的线程运行会造成不恰当的结果。</p>
+<h5 id="生产者消费者同步问题"><a href="#生产者消费者同步问题" class="headerlink" title="生产者消费者同步问题"></a>生产者消费者同步问题</h5><p>生产者消费者是典型的同步问题，他们共享了一个缓冲池(全局变量数组)，当缓冲池有空位时生产者线程向缓冲池中依次赋值，如果缓冲池满则等待。当缓冲池中有数据时消费者线程从中取走数据，如果缓冲池空则等待。</p>
+<h5 id="如何解决线程间访问共享变量的冲突问题"><a href="#如何解决线程间访问共享变量的冲突问题" class="headerlink" title="如何解决线程间访问共享变量的冲突问题"></a>如何解决线程间访问共享变量的冲突问题</h5><p>当多个线程访问同一个共享变量时，共享变量成为临界资源，它需要操作系统提供同步控制机制，以保证多个线程可以依序访问，当一个线程操作临界资源时其它线程不会中断其操作，因此对临界资源的操作是安全的。 下面是linux平台使用信号量的头文件和方法。 #include &lt;semaphore.h&gt; int sem_init(sem_t * sem, int pshared, unsigned int value);&#x2F;&#x2F;创建信号量变量，value是信号量的初值 int sem_destroy(sem_t *sem);&#x2F;&#x2F;销毁信号量 int sem_post(sem_t * sem);  &#x2F;&#x2F;信号量值增加1，并激活处于等待状态的线程  int sem_wait(sem_t * sem);  &#x2F;&#x2F;信号量值减少1 为0时将调用该方法的线程被OS阻塞 </p>
+<h4 id="编程要求"><a href="#编程要求" class="headerlink" title="编程要求"></a>编程要求</h4><p>主线程序启动生产者线程和消费者线程，并等待两个线程的结束。 两个线程使用三个信号量，其中生产者线程向全局变量进行十次赋值(代表生产)，每次赋值前都要检查是否有空位，有空位的情况下 需要获得互斥量sem_mutex，并对共享缓冲区进行赋值，然后释放互斥量以便消费者线程可以操作缓冲区临界资源。 消费者线程要从缓冲区取值，取值前先检查是否有可用数据，有可用数据的情况下再获得互斥量sem_mutex，再取出缓冲区的值。 要特别说明的是生产者和消费者线程工作的速率是不同的，但在同步信号控制下，两个线程节奏互相配合步调一致。在《计算机操作系统》 教材中使用了伪代码，并且循环体没有结束条件，在此用C语言改写原程序，生产者一共只生产十个数据。 ####测试说明 为简化数据操作，程序没有输入，主线程已经写好， void * producer(void * arg); void * consumer(void * arg); static sem_t sem_empty;&#x2F;&#x2F;空位个数 static sem_t sem_full; &#x2F;&#x2F;可用数据个数 static sem_t sem_mutex; &#x2F;&#x2F;互斥量，用于控制两个线程互斥访问缓冲区 static int buffer[]&#x3D;{0,0,0}; int main(int argc,char * argv[]) {   pthread_t id_prod,id_consum;   sem_init(&amp;sem_empty,0,3); &#x2F;&#x2F;初值为3，空位为3，   sem_init(&amp;sem_full,0,0);  &#x2F;&#x2F;初值为0，可用数据个数为0，   sem_init(&amp;sem_mutex,0,1); &#x2F;&#x2F;初值为1，用于控制两个线程互斥访问缓冲区    pthread_create(&amp;id_prod,  NULL,producer,NULL);&#x2F;&#x2F;创建生产者线程   pthread_create(&amp;id_consum,NULL,consumer,NULL);&#x2F;&#x2F;创建消费者线程</p>
+<p>  pthread_join(id_prod,NULL);  &#x2F;&#x2F;主线程等待生产者线程结束   pthread_join(id_consum,NULL);&#x2F;&#x2F;主线程等待消费者线程结束   sem_destroy(&amp;sem_empty);   sem_destroy(&amp;sem_full);   sem_destroy(&amp;sem_mutex);   return 0; } 学生需要补充producer线程与consumer中关于同步控制部分的程序。</p>
+<p>输出：1至10 (需由学生根据程序生成正确结果) 开始你的任务吧，祝你成功！</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//stu001.c 生产者消费者同步控制，由学生完成缺失代码。 </span></span><br><span class="line"><span class="comment">//主线程序启动生产者线程和消费者线程，全局变量初值为0</span></span><br><span class="line"><span class="comment">//生产者线程向全局变量进行10次赋值(代表生产)，消费者线程从全局变量读取值，///并重新赋值0(代表消费了产品)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;semaphore.h&gt;</span> </span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> * <span class="title function_">producer</span><span class="params">(<span class="type">void</span> * arg)</span>;</span><br><span class="line"><span class="type">void</span> * <span class="title function_">consumer</span><span class="params">(<span class="type">void</span> * arg)</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">sem_t</span> sem_empty;<span class="comment">//空位个数</span></span><br><span class="line"><span class="type">static</span> <span class="type">sem_t</span> sem_full; <span class="comment">//可用数据个数</span></span><br><span class="line"><span class="type">static</span> <span class="type">sem_t</span> sem_mutex; <span class="comment">//互斥量，用于控制两个线程互斥访问缓冲区</span></span><br><span class="line"><span class="type">static</span> <span class="type">int</span> buffer[]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;<span class="comment">//共享的缓冲区</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">char</span> * argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">pthread_t</span> id_prod,id_consum;</span><br><span class="line">  sem_init(&amp;sem_empty,<span class="number">0</span>,<span class="number">3</span>); <span class="comment">//初值为3，空位为3，</span></span><br><span class="line">  sem_init(&amp;sem_full,<span class="number">0</span>,<span class="number">0</span>);  <span class="comment">//初值为0，可用数据个数为0，</span></span><br><span class="line">  sem_init(&amp;sem_mutex,<span class="number">0</span>,<span class="number">1</span>); <span class="comment">//初值为1，用于控制两个线程互斥访问缓冲区 </span></span><br><span class="line">  pthread_create(&amp;id_prod,  <span class="literal">NULL</span>,producer,<span class="literal">NULL</span>);<span class="comment">//创建生产者线程</span></span><br><span class="line">  pthread_create(&amp;id_consum,<span class="literal">NULL</span>,consumer,<span class="literal">NULL</span>);<span class="comment">//创建消费者线程</span></span><br><span class="line"></span><br><span class="line">  pthread_join(id_prod,<span class="literal">NULL</span>);  <span class="comment">//主线程等待生产者线程结束</span></span><br><span class="line">  pthread_join(id_consum,<span class="literal">NULL</span>);<span class="comment">//主线程等待消费者线程结束</span></span><br><span class="line">  sem_destroy(&amp;sem_empty);</span><br><span class="line">  sem_destroy(&amp;sem_full);</span><br><span class="line">  sem_destroy(&amp;sem_mutex);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> * <span class="title function_">producer</span><span class="params">(<span class="type">void</span> * arg)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i,pIndex=<span class="number">0</span>; </span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">11</span>;i&lt;<span class="number">21</span>;i++)</span><br><span class="line">  &#123;</span><br><span class="line">	  <span class="comment">//请在begin end语句间补全程序语句实现生产者向缓冲区赋值操作 </span></span><br><span class="line">	  <span class="comment">/*  begin *******************程序代码约六行******************************* */</span></span><br><span class="line">	  sem_wait(&amp;sem_empty);<span class="comment">//empty--</span></span><br><span class="line">      sem_wait(&amp;sem_mutex); <span class="comment">//枷锁</span></span><br><span class="line">      buffer[pIndex]=i;   <span class="comment">//缓冲区只有三个位置</span></span><br><span class="line">      pIndex=(pIndex+<span class="number">1</span>)%<span class="number">3</span>;<span class="comment">// 11-- 0  12--1 13--2 14--0 15--1 16--2</span></span><br><span class="line">      sem_post(&amp;sem_mutex);<span class="comment">//解锁</span></span><br><span class="line">      sem_post(&amp;sem_full);<span class="comment">//full++</span></span><br><span class="line">	  <span class="comment">/*   end  ************************************************************** */</span> </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> * <span class="title function_">consumer</span><span class="params">(<span class="type">void</span> *arg)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i,cIndex=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">11</span>;i&lt;<span class="number">21</span>;i++)</span><br><span class="line">  &#123; </span><br><span class="line">	  <span class="comment">//请在begin end语句间补全程序语句实现扫描算法，算出总访问磁道数存入totaltracks变量 </span></span><br><span class="line">	  <span class="comment">/*  begin *******************程序代码约六行******************************* */</span> </span><br><span class="line">	    sem_wait(&amp;sem_full);<span class="comment">//full--</span></span><br><span class="line">    	sem_wait(&amp;sem_mutex);<span class="comment">//枷锁</span></span><br><span class="line">   	    <span class="built_in">printf</span>(<span class="string">&quot;%d,&quot;</span>,buffer[cIndex]);</span><br><span class="line">    	cIndex=(cIndex+<span class="number">1</span>)%<span class="number">3</span>;<span class="comment">//与上面对应</span></span><br><span class="line">    	sem_post(&amp;sem_mutex);<span class="comment">//解锁</span></span><br><span class="line">    	sem_post(&amp;sem_empty);<span class="comment">//empty++</span></span><br><span class="line">	  </span><br><span class="line">	  <span class="comment">/*   end  ************************************************************** */</span> </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考Linux下c++的东西</p>
+<p><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man3/sem_wait.3.html">https://man7.org/linux/man-pages/man3/sem_wait.3.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sem_wait是一个函数，也是一个原子操作，它的作用是从信号量的值减去一个“1”，但它永远会先等待该信号量为一个非零值才开始做减法。也就是说，如果你对一个值为2的信号量调用sem_wait()，线程将会继续执行，将信号量的值将减到1。</span><br><span class="line">如果对一个值为0的信号量调用sem_wait()，这个函数就会原地等待直到有其它线程增加了这个值使它不再是0为止。如果有两个线程都在sem_wait()中等待同一个信号量变成非零值，那么当它被第三个线程增加 一个“1”时，等待线程中只有一个能够对信号量做减法并继续执行，另一个还将处于等待状态。sem_trywait(sem_t *sem)是函数sem_wait的非阻塞版，它直接将信号量sem减1，同时返回错误代码。</span><br><span class="line">(不得不说，百度确实蛮会复制粘贴翻译的，只不过没有那个网站格式做的好hhh)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sem_post是给信号量的值加上一个“1”，它是一个“原子操作”－－－即同时对同一个信号量做加“1”操作的两个线程是不会冲突的；而同 时对同一个文件进行读和写操作的两个程序就有可能会引起冲突。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sem_t  C语言中，信号量的数据类型为结构sem_t，它本质上是一个长整型的数。</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_13999641/4314815">https://blog.51cto.com/u_13999641/4314815</a></p>
+<p>没看完【argc，argv是什么】</p>
+<p>真的忘的差不多了0.0</p>
+<p><img src="E:\BLOG\blog1\source\images\操作系统\2.png" alt="1679026388457"></p>
+<p><img src="E:\BLOG\blog1\source\images\操作系统\3.png" alt="1679026432795"></p>
+
+      
+    </div>
+
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/16/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiao.png">
+      <meta itemprop="name" content="毛">
+      <meta itemprop="description" content="在梦里啥都有">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="睡觉万岁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/16/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">java数据类型</a>
+        </h2>
+
+        <div class="post-meta">
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-16 22:06:57" itemprop="dateCreated datePublished" datetime="2023-03-16T22:06:57+08:00">2023-03-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-17 22:28:56" itemprop="dateModified" datetime="2023-03-17T22:28:56+08:00">2023-03-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/202/" itemprop="url" rel="index"><span itemprop="name">202</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java数据类型"><a href="#Java数据类型" class="headerlink" title="Java数据类型"></a>Java数据类型</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Java语言是强类型语言，对于每一种数据都定义了明确的具体的数据类型，在内存中分配了不同大小的内存空间。</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul>
+<li>基本数据类型<ul>
+<li>数值型<ul>
+<li>整数类型(byte,short,int,long)</li>
+<li>浮点类型(float,double)</li>
+</ul>
+</li>
+<li>字符型(char)</li>
+<li>布尔型(boolean)</li>
+</ul>
+</li>
+<li>引用数据类型<ul>
+<li>类(class)</li>
+<li>接口(interface)</li>
+<li>数组([])</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机存储单元"><a href="#计算机存储单元" class="headerlink" title="计算机存储单元"></a>计算机存储单元</h2><ul>
+<li>定义：变量是内存中的小容器，用来存储数据。那么计算机内存是怎么存储数据的呢？无论是内存还是硬盘，计算机存储设备的最小信息单元叫“位（bit）”，我们又称之为“比特位”，通常用小写的字母b表示。而计算机最小的存储单元叫“字节（byte）”，通常用大写字母B表示，字节是由连续的8个位组成。</li>
+<li>常用存储单元关系<ul>
+<li>1B&#x3D; 8b<br>1KB &#x3D; 1024B<br>1MB &#x3D; 1024KB<br>1GB &#x3D; 1024MB<br>1TB &#x3D; 1024GB</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java基本数据类型图"><a href="#Java基本数据类型图" class="headerlink" title="Java基本数据类型图"></a>Java基本数据类型图</h2><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/9.png" alt="1678974709618"></p>
+<ul>
+<li><p>定义</p>
+<ul>
+<li>数据类型的转换是在所赋值的数值类型和被变量接收的数据类型不一致时发生的，它需要从一种数据类型转换成另一种数据类型。</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li><p>隐式转换</p>
+<ul>
+<li><p>定义</p>
+<ul>
+<li>在运算过程中，由于不同的数据类型会转换成同一种数据类型，所以整型、浮点型以及字符型都可以参与混合运算。自动转换的规则是从低级类型数据转换成高级类型数据。</li>
+</ul>
+</li>
+<li><p>转换规则</p>
+<ul>
+<li>数值型数据的转换：byte→short→int→long→float→double。</li>
+<li>字符型转换为整型：char→int。</li>
+</ul>
+</li>
+<li><p>转换条件</p>
+<ul>
+<li>自动类型转换的实现需要同时满足两个条件：①两种数据类型彼此兼容，②目标类型的取值范围大于源数据类型（低级类型数据转换成高级类型数据）。例如 byte 类型向 short 类型转换时，由于 short 类型的取值范围较大，会自动将 byte 转换为 short 类型。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>显式转换</p>
+<ul>
+<li>定义<ul>
+<li>当两种数据类型不兼容，或目标类型的取值范围小于源类型时，自动转换将无法进行，这时就需要进行强制类型转换。</li>
+<li>语法格式<ul>
+<li>目标类型 变量名 &#x3D; (目标类型) (被转换的数据);<br>举例：int b &#x3D; (byte)(a + b);</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>如果超出了被赋值的数据类型的取值范围得到的结果会与你期望的结果不同</li>
+<li>不建议强制转换，因为会有精度的损失。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/15/3-15-2023/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -360,6 +814,13 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
 
               <time title="创建时间：2023-03-15 17:56:02" itemprop="dateCreated datePublished" datetime="2023-03-15T17:56:02+08:00">2023-03-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-17 22:29:00" itemprop="dateModified" datetime="2023-03-17T22:29:00+08:00">2023-03-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -382,12 +843,25 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
 
       
           <h2 id="2023-Week1-Exp-Upload"><a href="#2023-Week1-Exp-Upload" class="headerlink" title="2023_Week1_Exp_Upload"></a>2023_Week1_Exp_Upload</h2><h3 id="1-简答题-用-UMLet-工具对下面代码绘制类图"><a href="#1-简答题-用-UMLet-工具对下面代码绘制类图" class="headerlink" title="1. (简答题)用 UMLet 工具对下面代码绘制类图"></a>1. (简答题)用 UMLet 工具对下面代码绘制类图</h3><p><img src="https://p.ananas.chaoxing.com/star3/origin/8e470965b6077e294fa2bef9a04827c6.png" alt="img"></p>
-<p><img src="https://p.ananas.chaoxing.com/star3/origin/4dc3c08ad70d137d13b68a81b2e0efb8.png" alt="img"></p>
+<p>![]img](&#x2F;images&#x2F;设计模式&#x2F;5.png)</p>
+<p><img src="C:\Users\GJQ\AppData\Roaming\Typora\typora-user-images\1678972004441.png" alt="1678972004441"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.png" alt="1678972695825"></p>
 <p>【关联关系】：是一种拥有的关系，它使一个类知道另一个类的属性和方法</p>
 <p>【代码体现】：成员变量</p>
 <p>【箭头及指向】：带普通箭头的实心线，指向被拥有者</p>
-<p>上图中，课程与学生是双向关联，课程有多名学生，学生也可能有多个课程。</p>
-<p>但学生与成绩间的关系为单向关联，一名学生可能要有多门成绩，成绩有学生信息，但学生类不拥有成绩</p>
+<p>1.上图中，课程与学生是双向关联，课程有多名学生，学生也可能有多个课程。</p>
+<p>2.但学生与成绩间的关系为单向关联，一名学生可能要有多门成绩，成绩有学生信息，但学生类不拥有成绩变量</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/7.png" alt="1678972739648"></p>
+<p>3.【组合关系】：是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。</p>
+<p>组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期。</p>
+<p>【代码体现】：成员变量</p>
+<p>【箭头及指向】：带实心菱形的实线，菱形指向整体</p>
+<p>上图中课程为整体，成绩没有课程就不存在。</p>
+<p><img src="E:\BLOG\blog1\source\images\设计模式\8.png" alt="1678973083372"></p>
+<p>4.【依赖关系】：是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.</p>
+<p>【代码表现】：局部变量、方法的参数或者对静态方法的调用</p>
+<p>【箭头及指向】：带箭头的虚线，指向被使用者</p>
+<p>一个宿舍类的实现需要另一个学生类的协助，宿舍是被使用者</p>
 
       
     </div>
@@ -960,327 +1434,6 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/14/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiao.png">
-      <meta itemprop="name" content="毛">
-      <meta itemprop="description" content="在梦里啥都有">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡觉万岁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/14/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/" class="post-title-link" itemprop="url">虚拟机和主机双向复制</a>
-        </h2>
-
-        <div class="post-meta">
-        
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-14 00:19:02 / 修改时间：01:01:33" itemprop="dateCreated datePublished" datetime="2023-03-14T00:19:02+08:00">2023-03-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="虚拟机和主机双向复制"><a href="#虚拟机和主机双向复制" class="headerlink" title="虚拟机和主机双向复制"></a>虚拟机和主机双向复制</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/14/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%8C%E5%90%91%E5%A4%8D%E5%88%B6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/13/spark/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiao.png">
-      <meta itemprop="name" content="毛">
-      <meta itemprop="description" content="在梦里啥都有">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡觉万岁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/13/spark/" class="post-title-link" itemprop="url">Spark入门：RDD编程</a>
-        </h2>
-
-        <div class="post-meta">
-        
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-03-13 21:47:53" itemprop="dateCreated datePublished" datetime="2023-03-13T21:47:53+08:00">2023-03-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-14 01:00:55" itemprop="dateModified" datetime="2023-03-14T01:00:55+08:00">2023-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Spark入门：RDD编程"><a href="#Spark入门：RDD编程" class="headerlink" title="Spark入门：RDD编程"></a>Spark入门：RDD编程</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/13/spark/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/08/3-8-2023/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiao.png">
-      <meta itemprop="name" content="毛">
-      <meta itemprop="description" content="在梦里啥都有">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡觉万岁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/08/3-8-2023/" class="post-title-link" itemprop="url">3-8-2023</a>
-        </h2>
-
-        <div class="post-meta">
-        
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-08 13:19:53 / 修改时间：13:45:39" itemprop="dateCreated datePublished" datetime="2023-03-08T13:19:53+08:00">2023-03-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="三月初自我反省"><a href="#三月初自我反省" class="headerlink" title="三月初自我反省"></a>三月初自我反省</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/08/3-8-2023/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiao.png">
-      <meta itemprop="name" content="毛">
-      <meta itemprop="description" content="在梦里啥都有">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="睡觉万岁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-title-link" itemprop="url">DataError at /index/add_member 1366, "Incorrect string value :\\xE4\\xBC\\x98\\xE</a>
-        </h2>
-
-        <div class="post-meta">
-        
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-03-05 11:11:11" itemprop="dateCreated datePublished" datetime="2023-03-05T11:11:11+08:00">2023-03-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-08 13:16:49" itemprop="dateModified" datetime="2023-03-08T13:16:49+08:00">2023-03-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="mailto:&#56;&#x32;&#x35;&#x35;&#x37;&#x37;&#x39;&#x34;&#48;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#56;&#x32;&#x35;&#x35;&#x37;&#x37;&#x39;&#x34;&#48;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p>
-<h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1352,20 +1505,20 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1424,7 +1577,7 @@ height: 100%; left: 0; top: 0;"> </iframe></div> -->
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.7k字</span>
+  <span class="post-count">博客全站共25.1k字</span>
 </div>
 
 
