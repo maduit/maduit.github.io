@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>操作系统——进程同步——哲学家进餐问题</title>
+      <link href="/2023/03/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E2%80%94%E2%80%94%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E2%80%94%E2%80%94%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/03/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E2%80%94%E2%80%94%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E2%80%94%E2%80%94%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h2 id="哲学家进餐问题"><a href="#哲学家进餐问题" class="headerlink" title="哲学家进餐问题"></a>哲学家进餐问题</h2><p>复习一下pv操作互斥锁</p><p><a href="/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5">pv操作</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>3-23-2023</title>
       <link href="/2023/03/23/3-23-2023/"/>
       <url>/2023/03/23/3-23-2023/</url>
@@ -204,7 +229,7 @@
     
     
     <entry>
-      <title>如何在Linux系统下编译C++</title>
+      <title>操作系统——进程同步——生产者消费者问题</title>
       <link href="/2023/03/17/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/"/>
       <url>/2023/03/17/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5/</url>
       
@@ -220,7 +245,7 @@
       
         <tags>
             
-            <tag> linux_c++ </tag>
+            <tag> 操作系统 </tag>
             
         </tags>
       
@@ -458,7 +483,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#x32;&#53;&#x35;&#x37;&#55;&#x39;&#x34;&#x30;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#109;">&#56;&#x32;&#53;&#x35;&#x37;&#55;&#x39;&#x34;&#x30;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#109;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#x32;&#53;&#x35;&#55;&#55;&#x39;&#x34;&#x30;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;">&#56;&#x32;&#53;&#x35;&#55;&#55;&#x39;&#x34;&#x30;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -867,31 +892,6 @@
     
     
     <entry>
-      <title>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</title>
-      <link href="/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/"/>
-      <url>/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/</url>
-      
-        <content type="html"><![CDATA[<h1 id="npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包"><a href="#npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包" class="headerlink" title="npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包"></a>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><span id="more"></span><p>在当前文件夹目录下npm安装 hexo-cli -g</p><p>在当前文件夹不显示</p><p>因为这是全局安装</p><p>所以会跑到node.js文件夹目录底下</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/5.png" alt="1669790121108"></p><p>去这边找会发现一个hexo-cli的文件夹</p><p>点击这个博客[<a href="https://blog.csdn.net/qq_38613992/article/details/103769192]">https://blog.csdn.net/qq_38613992/article/details/103769192]</a></p><p><strong>查看npm的配置</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p>一开始我是没有global&#x3D;？？？ 的</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/6.png" alt="npm配置信息"></p><p><strong>2.查看全局下，是否有自己安装的包</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>一般看上面那个F盘的图，会在那里</p><p>3.修改npm配置信息，查看 图例1，global属性是否安装到全局，如果你的这里是true，那么，就算你安装一个包时，没有写-g，它也会自动将你的包安装到全局！ — 修改配置信息 方法一：命令行输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set global=false，</span><br><span class="line"></span><br><span class="line">npm config set global=false</span><br></pre></td></tr></table></figure><p>再次查看配置，确认是否修改</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/7.png" alt="1669790489536"></p><p>然后再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br></pre></td></tr></table></figure><p>后面不要-g就会在自己的文件夹里出现node_moudle了</p><p>你可以试试有-g的&#96;&#96;&#96;npm install hexo-cli&#96;&#96;，这样的话，就又会跑到node.js的global的moudle的文件夹里了</p><p>安装完成，如图</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/8.png" alt="1669790709401"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2023 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
       <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
       <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
@@ -909,6 +909,31 @@
         <tags>
             
             <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</title>
+      <link href="/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/"/>
+      <url>/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/</url>
+      
+        <content type="html"><![CDATA[<h1 id="npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包"><a href="#npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包" class="headerlink" title="npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包"></a>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><span id="more"></span><p>在当前文件夹目录下npm安装 hexo-cli -g</p><p>在当前文件夹不显示</p><p>因为这是全局安装</p><p>所以会跑到node.js文件夹目录底下</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/5.png" alt="1669790121108"></p><p>去这边找会发现一个hexo-cli的文件夹</p><p>点击这个博客[<a href="https://blog.csdn.net/qq_38613992/article/details/103769192]">https://blog.csdn.net/qq_38613992/article/details/103769192]</a></p><p><strong>查看npm的配置</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p>一开始我是没有global&#x3D;？？？ 的</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/6.png" alt="npm配置信息"></p><p><strong>2.查看全局下，是否有自己安装的包</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>一般看上面那个F盘的图，会在那里</p><p>3.修改npm配置信息，查看 图例1，global属性是否安装到全局，如果你的这里是true，那么，就算你安装一个包时，没有写-g，它也会自动将你的包安装到全局！ — 修改配置信息 方法一：命令行输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set global=false，</span><br><span class="line"></span><br><span class="line">npm config set global=false</span><br></pre></td></tr></table></figure><p>再次查看配置，确认是否修改</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/7.png" alt="1669790489536"></p><p>然后再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br></pre></td></tr></table></figure><p>后面不要-g就会在自己的文件夹里出现node_moudle了</p><p>你可以试试有-g的&#96;&#96;&#96;npm install hexo-cli&#96;&#96;，这样的话，就又会跑到node.js的global的moudle的文件夹里了</p><p>安装完成，如图</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/8.png" alt="1669790709401"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -967,31 +992,6 @@
     
     
     <entry>
-      <title>C++文件操作之freopen</title>
-      <link href="/2023/02/23/C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8Bfreopen/"/>
-      <url>/2023/02/23/C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8Bfreopen/</url>
-      
-        <content type="html"><![CDATA[<h1 id="C-文件操作之freopen"><a href="#C-文件操作之freopen" class="headerlink" title="C++文件操作之freopen"></a>C++文件操作之freopen</h1><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">freopen(&quot;xxx.in&quot;,&quot;r&quot;,stdin);//输入文件</span><br><span class="line">freopen(&quot;xxx.out&quot;,&quot;w&quot;,stdout);//输出文件</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">freopen(&quot;a+b.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">freopen(&quot;a+b.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">//以上是模板</span><br><span class="line">int a,b;</span><br><span class="line">cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">cout&lt;&lt;a+b&lt;&lt;endl;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2023 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Failed to scan</title>
       <link href="/2023/02/23/Failed%20to%20scan%20%5BfileFmavenrepositoryorgspringframeworkspring-aspects5/"/>
       <url>/2023/02/23/Failed%20to%20scan%20%5BfileFmavenrepositoryorgspringframeworkspring-aspects5/</url>
@@ -1009,6 +1009,31 @@
         <tags>
             
             <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++文件操作之freopen</title>
+      <link href="/2023/02/23/C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8Bfreopen/"/>
+      <url>/2023/02/23/C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8Bfreopen/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-文件操作之freopen"><a href="#C-文件操作之freopen" class="headerlink" title="C++文件操作之freopen"></a>C++文件操作之freopen</h1><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">freopen(&quot;xxx.in&quot;,&quot;r&quot;,stdin);//输入文件</span><br><span class="line">freopen(&quot;xxx.out&quot;,&quot;w&quot;,stdout);//输出文件</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">freopen(&quot;a+b.in&quot;,&quot;r&quot;,stdin);</span><br><span class="line">freopen(&quot;a+b.out&quot;,&quot;w&quot;,stdout);</span><br><span class="line">//以上是模板</span><br><span class="line">int a,b;</span><br><span class="line">cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">cout&lt;&lt;a+b&lt;&lt;endl;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
             
         </tags>
       
