@@ -4,7 +4,7 @@ tag: hexo
 categories: 2023
 ---
 # 解决bash: hexo: command not found
-
+<!-- more -->
 检查 nodejs 和 npm 是否正常，依次输入命令 `node -v` 和 `npm -v` 看看是否有相关版本信息
 
 <!-- more -->

@@ -38,6 +38,8 @@ npm config list
 
 ```javascript
 npm root -g//获取到全局安装目录
+
+
 ```
 
 一般看上面那个F盘的图，会在那里
