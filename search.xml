@@ -4,11 +4,236 @@
   
     
     <entry>
+      <title>关于最大值最小值的定义</title>
+      <link href="/2023/04/15/%E5%85%B3%E4%BA%8E%E6%9C%80%E5%A4%A7%E5%80%BC%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E5%AE%9A%E4%B9%89/"/>
+      <url>/2023/04/15/%E5%85%B3%E4%BA%8E%E6%9C%80%E5%A4%A7%E5%80%BC%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E5%AE%9A%E4%B9%89/</url>
+      
+        <content type="html"><![CDATA[<h4 id="最大值"><a href="#最大值" class="headerlink" title="最大值"></a>最大值</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int result = INT32_MAX;</span><br></pre></td></tr></table></figure><p>最近在刷Leetcode的一些题的时候，发现经常会使用到最大值。<br>Xcode告诉我这个值在limits.h中<br>老版本的limit.h可能还会有NC++</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define INT_MAX   2147483647</span><br></pre></td></tr></table></figure><p>但是现在新的版本已经是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define INT_MAX   __INT_MAX__</span><br></pre></td></tr></table></figure><p>同样的 INT_MIN 、 LONG_MAX 等等数值都会有相应的定义。</p><h4 id="最小值"><a href="#最小值" class="headerlink" title="最小值"></a>最小值</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int result = INT32_MIN </span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INT32_MAX</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++最大值 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>209. 长度最小的子数组-滑动窗口</title>
+      <link href="/2023/04/14/209.-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+      <url>/2023/04/14/209.-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/minimum-size-subarray-sum/">209. 长度最小的子数组</a></p><p>暴力o(n^2)超时呵呵呵，不是能做出来就好了吗啊吧啊吧。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> sum;</span><br><span class="line">        <span class="type">int</span> min=<span class="number">100000</span>;</span><br><span class="line">        <span class="type">int</span> count;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">            sum=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i;j&lt;nums.size();j++)&#123;</span><br><span class="line">                    sum+=nums[j];</span><br><span class="line">                    <span class="keyword">if</span>(sum&gt;=target)&#123;</span><br><span class="line">                        count=j-i+<span class="number">1</span>;</span><br><span class="line">                        min=min&lt;count?min:count;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(min&gt;nums.size()) min=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>滑动窗口</p><p>思路是先让</p><p><code>sum+nums[j]</code></p><p>当<code>sum&gt;=target</code>的时候</p><p>算出子数组长度subL</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```while```循环```nums[i++]```一直减到它```&lt;target```退出```while```</span><br><span class="line"></span><br><span class="line">用result记录min的subL</span><br><span class="line"></span><br><span class="line">然后再次大循环从nums[j+1]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">88</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int minSubArrayLen(int target, vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    int i=0;</span><br><span class="line">    int subL=0;</span><br><span class="line">    int sum=0;</span><br><span class="line">    int result=INT_MAX;</span><br><span class="line">    for(int j =0;j&lt;nums.size();j++)&#123;</span><br><span class="line">        sum+=nums[j];</span><br><span class="line">        while(sum&gt;=target)&#123;</span><br><span class="line">            subL=j-i+1;</span><br><span class="line">            sum-=nums[i];</span><br><span class="line">            result=min(result,subL);</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result==INT_MAX ? 0 : result;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>如何理解</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return result==INT_MAX ? 0 : result;</span><br></pre></td></tr></table></figure><p>当result&#x3D;&#x3D;INT_MAX时候</p><p>是返回0</p><p>否返回result </p><p>如何理解</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = result &lt; subLength ? result : subLength;</span><br></pre></td></tr></table></figure><p>当result&lt;subL的时候</p><p>是返回result</p><p>否返回subL</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 滑动窗口 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法-977. 有序数组的平方</title>
+      <link href="/2023/04/14/%E5%8F%8C%E6%8C%87%E9%92%88-977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/"/>
+      <url>/2023/04/14/%E5%8F%8C%E6%8C%87%E9%92%88-977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">977. 有序数组的平方</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt; <span class="title function_">sortedSquares</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums)</span> &#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt; <span class="title function_">result</span><span class="params">(nums.size(),<span class="number">0</span>)</span>;</span><br><span class="line">    <span class="type">int</span> k=nums.size()<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>,j=nums.size()<span class="number">-1</span>;i&lt;=j;)&#123;  <span class="comment">// 注意i&lt;=j</span></span><br><span class="line">        <span class="keyword">if</span>(nums[i]*nums[i]&lt;nums[j]*nums[j])&#123;</span><br><span class="line">            result[k--]=nums[j]*nums[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[i]*nums[i]&gt;=nums[j]*nums[j])&#123;</span><br><span class="line">            result[k--]=nums[i]*nums[i];</span><br><span class="line">            i++;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法---844.比较含退格的字符串</title>
+      <link href="/2023/04/13/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---844.%E6%AF%94%E8%BE%83%E5%90%AB%E9%80%80%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2023/04/13/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---844.%E6%AF%94%E8%BE%83%E5%90%AB%E9%80%80%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="844-比较含退格的字符串"><a href="#844-比较含退格的字符串" class="headerlink" title="844. 比较含退格的字符串"></a><a href="https://leetcode.cn/problems/backspace-string-compare/">844. 比较含退格的字符串</a></h4><p>我没看懂怎么用双指针，用栈吧（阿巴阿巴阿巴，傻子流口水）</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">bool</span> <span class="title function_">backspaceCompare</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> build(S) == build(T);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> <span class="title function_">build</span><span class="params">(<span class="built_in">string</span> str)</span> &#123;</span><br><span class="line">        <span class="built_in">string</span> ret;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> ch : str) &#123;</span><br><span class="line">            <span class="keyword">if</span> (ch != <span class="string">&#x27;#&#x27;</span>) &#123;</span><br><span class="line">                ret.push_back(ch);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!ret.empty()) &#123;</span><br><span class="line">                ret.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法---283. 移动零</title>
+      <link href="/2023/04/13/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---283.-%E7%A7%BB%E5%8A%A8%E9%9B%B6/"/>
+      <url>/2023/04/13/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---283.-%E7%A7%BB%E5%8A%A8%E9%9B%B6/</url>
+      
+        <content type="html"><![CDATA[<h4 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">moveZeroes</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize)</span>&#123;</span><br><span class="line">        <span class="type">int</span> target=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> slow=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> fast;</span><br><span class="line">        <span class="keyword">for</span>(fast=<span class="number">0</span>;fast&lt;numsSize;fast++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[fast]!=target)&#123;</span><br><span class="line">                nums[slow]=nums[fast];</span><br><span class="line">                slow++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> i;</span><br><span class="line">        <span class="keyword">for</span>(i=slow;i&lt;numsSize;i++)&#123;</span><br><span class="line">            nums[i]=target;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在后面一个for那边卡了，不敢写（因为用了两个for）时间复杂度大不敢了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法---26. 删除有序数组中的重复项</title>
+      <link href="/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---26.-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+      <url>/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---26.-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize)</span>&#123;</span><br><span class="line">    <span class="type">int</span> slow=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> fast;</span><br><span class="line">    <span class="keyword">for</span>(fast=<span class="number">0</span>;fast&lt;numsSize;fast++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[slow]!=nums[fast])&#123;</span><br><span class="line">            slow++;</span><br><span class="line">            nums[slow]=nums[fast];           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/1.gif" alt="IMG_0057"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法---27.移除元素</title>
+      <link href="/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
+      <url>/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95---%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/remove-element/">27. 移除元素</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="type">int</span> slow=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>( <span class="type">int</span> fast=<span class="number">0</span>;fast&lt;numsSize;fast++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[fast]!=val)&#123;</span><br><span class="line">                nums[slow]=nums[fast];</span><br><span class="line">                slow++;</span><br><span class="line">            &#125;</span><br><span class="line">   </span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> slow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>反而比暴力慢</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> val)</span></span>&#123;</span><br><span class="line">        <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> nums2[<span class="number">100</span>];</span><br><span class="line">        <span class="type">int</span> i;</span><br><span class="line">        <span class="keyword">for</span>( i =<span class="number">0</span>;i&lt;numsSize;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i]==val)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>;j &lt; numsSize;j++)&#123;</span><br><span class="line">                    nums[j<span class="number">-1</span>]=nums[j];</span><br><span class="line">                &#125; </span><br><span class="line">                         numsSize--;</span><br><span class="line">            i--;</span><br><span class="line">            &#125;</span><br><span class="line">   </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> numsSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>双指针法</title>
+      <link href="/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/"/>
+      <url>/2023/04/12/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/27.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0-%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95.gif" alt="IMG_0057"></p><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p><p>定义快慢指针</p><ul><li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li><li>慢指针：指向更新 新数组下标的位置</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">slow=<span class="number">0</span>;</span><br><span class="line">val=<span class="number">3</span></span><br><span class="line">nums[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> fast=<span class="number">0</span>;fast&lt;size;fast++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums[fast]!=val)&#123; <span class="comment">//当【fast】的不等于val的值的时候</span></span><br><span class="line">    nums[slow]=nums[fast];    <span class="comment">// slow是下标  fast是数组元素</span></span><br><span class="line">        slow++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> slow;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 相向双指针方法，基于元素顺序可以改变的题目描述改变了元素相对位置，确保了移动最少元素</span></span><br><span class="line"><span class="comment">* 时间复杂度：O(n)</span></span><br><span class="line"><span class="comment">* 空间复杂度：O(1)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> leftIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> rightIndex = nums.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">            <span class="comment">// 找左边等于val的元素</span></span><br><span class="line">            <span class="keyword">while</span> (leftIndex &lt;= rightIndex &amp;&amp; nums[leftIndex] == val)&#123;</span><br><span class="line">                ++leftIndex;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 找右边不等于val的元素</span></span><br><span class="line">            <span class="keyword">while</span> (leftIndex &lt;= rightIndex &amp;&amp; nums[rightIndex] != val) &#123;</span><br><span class="line">                -- rightIndex;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将右边不等于val的元素覆盖左边等于val的元素</span></span><br><span class="line">            <span class="keyword">if</span> (leftIndex &lt; rightIndex) &#123;</span><br><span class="line">                nums[leftIndex++] = nums[rightIndex--];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> leftIndex;   <span class="comment">// leftIndex一定指向了最终数组末尾的下一个元素</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 双指针法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vector容器删除元素的几种简单方法</title>
+      <link href="/2023/04/12/vector%E5%AE%B9%E5%99%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%E7%9A%84%E5%87%A0%E7%A7%8D%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95/"/>
+      <url>/2023/04/12/vector%E5%AE%B9%E5%99%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%E7%9A%84%E5%87%A0%E7%A7%8D%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、直接删除法"><a href="#一、直接删除法" class="headerlink" title="一、直接删除法"></a>一、直接删除法</h4><h5 id="（1）使用-vector库函数“erase”删除，使用erase函数后容器size自动-1"><a href="#（1）使用-vector库函数“erase”删除，使用erase函数后容器size自动-1" class="headerlink" title="（1）使用 vector库函数“erase”删除，使用erase函数后容器size自动-1"></a>（1）使用 vector库函数“erase”删除，使用erase函数后容器size自动-1</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> detarget)</span> &#123;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line">           <span class="keyword">if</span>(nums[i] == detarget)&#123;</span><br><span class="line">               nums.erase(nums.begin() + i); </span><br><span class="line">               i--; <span class="comment">//由于容器size-1，还按原来的i的话相当于自动右移一位而漏掉一个元素</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> nums.size();      </span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> detarget)</span> &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(nums[i] == detarget)&#123;</span><br><span class="line">nums.erase(nums.begin() + i);</span><br><span class="line">i--; <span class="comment">//由于容器size-1，还按原``来的i的话相当于自动右移一位而漏掉一个元素</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> nums.size();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt; nums ;</span><br><span class="line">    nums.push_back(<span class="number">3</span>);</span><br><span class="line">nums.push_back(<span class="number">2</span>);</span><br><span class="line">nums.push_back(<span class="number">2</span>);</span><br><span class="line">nums.push_back(<span class="number">3</span>);</span><br><span class="line">    <span class="type">int</span> detarget = <span class="number">3</span>;</span><br><span class="line">    <span class="type">int</span> len = removeElement(nums, detarget);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;After removing &quot;</span> &lt;&lt; detarget &lt;&lt; <span class="string">&quot;, the length of nums is &quot;</span> &lt;&lt; len &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; i++)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; nums[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="（2）使用-vector库函数“swap和pop-back-”-由于pop-back删除的是最后一个元素，所以先移位再删除"><a href="#（2）使用-vector库函数“swap和pop-back-”-由于pop-back删除的是最后一个元素，所以先移位再删除" class="headerlink" title="（2）使用 vector库函数“swap和pop_back()”,由于pop_back删除的是最后一个元素，所以先移位再删除"></a>（2）使用 vector库函数“swap和pop_back()”,由于pop_back删除的是最后一个元素，所以先移位再删除</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> detarget)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] == detarget)&#123;   </span><br><span class="line">                swap(nums[i], nums[nums.size() - <span class="number">1</span>]); <span class="comment">//将要删除的元素交换到最后</span></span><br><span class="line">                nums.pop_back(); </span><br><span class="line">                i--; <span class="comment">//这里的i--与上面的作用一样</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums.size();      </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h4 id="二、遍历覆盖法"><a href="#二、遍历覆盖法" class="headerlink" title="二、遍历覆盖法"></a>二、遍历覆盖法</h4><p>如果从数组的角度理解，因为数组存储的内容在地址上是连续的，要移除目标元素，就没有库函数可以使用，那就需要对其他元素进行处理，进行覆盖和前移，比较暴力的思路是发现目标元素后，将后面的所有元素都前移覆盖原来的元素，这种方法需要两个for循环，时间复杂度为O(n2),这里不详细讲这种写法。<br>从覆盖的角度思考，我们可以通过一次遍历把非目标元素全部前移覆盖到前半部片</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> detarget)</span> &#123;</span><br><span class="line">         <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> x : nums)  <span class="comment">//遍历全部元素</span></span><br><span class="line">            <span class="keyword">if</span>(x != detarget)  nums[size++] = x;<span class="comment">//如果不是要删除的目标元素，把它前移覆盖到前半部分</span></span><br><span class="line">        <span class="keyword">return</span> size;  <span class="comment">//这里的size即为删除后的容量大小</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//暴力</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> nums2[<span class="number">100</span>];</span><br><span class="line">        <span class="type">int</span> i;</span><br><span class="line">        <span class="keyword">for</span>( i =<span class="number">0</span>;i&lt;numsSize;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i]==val)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>;j &lt; numsSize;j++)&#123;</span><br><span class="line">                    nums[j<span class="number">-1</span>]=nums[j];</span><br><span class="line">                &#125; </span><br><span class="line">            numsSize--;</span><br><span class="line">            i--;</span><br><span class="line">            &#125;</span><br><span class="line">   </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> numsSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="三、相向双指针法"><a href="#三、相向双指针法" class="headerlink" title="三、相向双指针法"></a>三、相向双指针法</h4><h5 id="1-使用vector库函数swap，通过有两个指针和一个for循环将所有元素分为两个部分"><a href="#1-使用vector库函数swap，通过有两个指针和一个for循环将所有元素分为两个部分" class="headerlink" title="(1)使用vector库函数swap，通过有两个指针和一个for循环将所有元素分为两个部分,"></a>(1)使用vector库函数swap，通过有两个指针和一个for循环将所有元素分为两个部分,</h5><p>左端的指针（快指针）控制前半部分的边界，swap后前半部分全部是要保留的元素<br>右端的指针（慢指针）控制后半部分的边界，swap后后半部分全部是要删除的元素</p><p>&#x2F;&#x2F;时间复杂度：O（n)<br>&#x2F;&#x2F;空间复杂度：O（1）</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> detarget)</span> &#123;</span><br><span class="line">       <span class="type">int</span> j = nums.size() - <span class="number">1</span>; </span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= j; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (nums[i] == detarget) &#123;  </span><br><span class="line">               swap(nums[i--], nums[j--]); <span class="comment">//注意这里的i--，j--，代表先交换再移动，而不是先移动再交换</span></span><br><span class="line">               <span class="comment">//i--的原因：如果发生交换的两个元素全是要删除的目标元素，这样不会把换过来的漏删</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> j + <span class="number">1</span>; <span class="comment">//j+1就是删除完的size大小</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><p>ps：上面几种方法只给出了核心算法的代码，具体问题做出相应改动即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vector容器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>4-12-2023</title>
       <link href="/2023/04/12/4-12-2023/"/>
       <url>/2023/04/12/4-12-2023/</url>
       
-        <content type="html"><![CDATA[<ol><li></li></ol><div ><img src="\images\dayliy_image\4.12.jpg" alt="drawing" width="200" /></div><p>2.打卡<img src="/images/dayliy_image/leetcode1.png" alt="1681285904280"></p><p>3.洛谷先mark一下之前的题目数量</p><p><img src="/images/dayliy_image/luogu1.png" alt="1681286036053"></p><p>Conclusion:一天2h打题目太少了</p><p>4.数学放缓(等张宇来了过第三遍一二章（发疯）理出思维导图)</p><p>改良计划:</p><p>①下午没课就看数学，看到5.吃饭，吃完回来继续数学，到7.30。</p><p>②看英语文章1h（尝试了一下，有难度的文章1h够呛）</p><p>③刷题到11.00</p><p>④回去床上背单词（当然课上不困最好课上干掉）</p><p>⑤最近沉迷策门有所懈怠（双手合十）（低头认错）</p>]]></content>
+        <content type="html"><![CDATA[<ol><li></li></ol><div ><img src="\images\dayliy_image\4.12.jpg" alt="drawing" width="200" /></div><p>2.打卡<img src="/images/dayliy_image/leetcode1.png" alt="1681285904280"></p><p>3.洛谷先mark一下之前的题目数量，vjudge就不去刷了。</p><p><img src="/images/dayliy_image/luogu1.png" alt="1681286036053"></p><p>Conclusion:一天2h打题目太少了</p><p>4.数学放缓(等张宇来了过第三遍一二章（发疯）理出思维导图)</p><p>改良计划:</p><p>①下午没课就看数学，看到5.吃饭，吃完回来继续数学，到7.30。</p><p>②看英语文章1h（尝试了一下，有难度的文章1h够呛）</p><p>③刷题到11.00</p><p>④回去床上背单词（当然课上不困最好课上干掉）</p><p>⑤最近沉迷策门有所懈怠（双手合十）（低头认错）</p>]]></content>
       
       
       <categories>
@@ -933,7 +1158,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#50;&#53;&#53;&#55;&#x37;&#57;&#x34;&#48;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;">&#56;&#50;&#53;&#53;&#55;&#x37;&#57;&#x34;&#48;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#x32;&#53;&#x35;&#x37;&#x37;&#57;&#x34;&#48;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#56;&#x32;&#53;&#x35;&#x37;&#x37;&#57;&#x34;&#48;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -1342,31 +1567,6 @@
     
     
     <entry>
-      <title>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</title>
-      <link href="/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/"/>
-      <url>/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/</url>
-      
-        <content type="html"><![CDATA[<h1 id="npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包"><a href="#npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包" class="headerlink" title="npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包"></a>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><span id="more"></span><p>在当前文件夹目录下npm安装 hexo-cli -g</p><p>在当前文件夹不显示</p><p>因为这是全局安装</p><p>所以会跑到node.js文件夹目录底下</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/5.png" alt="1669790121108"></p><p>去这边找会发现一个hexo-cli的文件夹</p><p>点击这个博客[<a href="https://blog.csdn.net/qq_38613992/article/details/103769192]">https://blog.csdn.net/qq_38613992/article/details/103769192]</a></p><p><strong>查看npm的配置</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p>一开始我是没有global&#x3D;？？？ 的</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/6.png" alt="npm配置信息"></p><p><strong>2.查看全局下，是否有自己安装的包</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>一般看上面那个F盘的图，会在那里</p><p>3.修改npm配置信息，查看 图例1，global属性是否安装到全局，如果你的这里是true，那么，就算你安装一个包时，没有写-g，它也会自动将你的包安装到全局！ — 修改配置信息 方法一：命令行输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set global=false，</span><br><span class="line"></span><br><span class="line">npm config set global=false</span><br></pre></td></tr></table></figure><p>再次查看配置，确认是否修改</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/7.png" alt="1669790489536"></p><p>然后再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br></pre></td></tr></table></figure><p>后面不要-g就会在自己的文件夹里出现node_moudle了</p><p>你可以试试有-g的&#96;&#96;&#96;npm install hexo-cli&#96;&#96;，这样的话，就又会跑到node.js的global的moudle的文件夹里了</p><p>安装完成，如图</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/8.png" alt="1669790709401"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2023 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
       <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
       <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
@@ -1384,6 +1584,31 @@
         <tags>
             
             <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</title>
+      <link href="/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/"/>
+      <url>/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/</url>
+      
+        <content type="html"><![CDATA[<h1 id="npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包"><a href="#npm-install-包，没有报错，提示安装成功，但是项目中没有出现node-modules也没有安装的包" class="headerlink" title="npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包"></a>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><span id="more"></span><p>在当前文件夹目录下npm安装 hexo-cli -g</p><p>在当前文件夹不显示</p><p>因为这是全局安装</p><p>所以会跑到node.js文件夹目录底下</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/5.png" alt="1669790121108"></p><p>去这边找会发现一个hexo-cli的文件夹</p><p>点击这个博客[<a href="https://blog.csdn.net/qq_38613992/article/details/103769192]">https://blog.csdn.net/qq_38613992/article/details/103769192]</a></p><p><strong>查看npm的配置</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p>一开始我是没有global&#x3D;？？？ 的</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/6.png" alt="npm配置信息"></p><p><strong>2.查看全局下，是否有自己安装的包</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm root -g<span class="comment">//获取到全局安装目录</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>一般看上面那个F盘的图，会在那里</p><p>3.修改npm配置信息，查看 图例1，global属性是否安装到全局，如果你的这里是true，那么，就算你安装一个包时，没有写-g，它也会自动将你的包安装到全局！ — 修改配置信息 方法一：命令行输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set global=false，</span><br><span class="line"></span><br><span class="line">npm config set global=false</span><br></pre></td></tr></table></figure><p>再次查看配置，确认是否修改</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/7.png" alt="1669790489536"></p><p>然后再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br></pre></td></tr></table></figure><p>后面不要-g就会在自己的文件夹里出现node_moudle了</p><p>你可以试试有-g的&#96;&#96;&#96;npm install hexo-cli&#96;&#96;，这样的话，就又会跑到node.js的global的moudle的文件夹里了</p><p>安装完成，如图</p><p><img src="/images/hexo%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/8.png" alt="1669790709401"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       
