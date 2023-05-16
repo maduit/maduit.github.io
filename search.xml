@@ -4,6 +4,256 @@
   
     
     <entry>
+      <title>5月中旬</title>
+      <link href="/2023/05/16/5%E6%9C%88%E4%B8%AD%E6%97%AC/"/>
+      <url>/2023/05/16/5%E6%9C%88%E4%B8%AD%E6%97%AC/</url>
+      
+        <content type="html"><![CDATA[<p>1.背单词太难了</p><img src="\images\dayliy_image\5.16.jpg" alt="drawing" width="200"/><p>2.数学要保持自我成就感</p><img src="\images\dayliy_image\notebook.jpg" alt="drawing" width="200"/><p>3.刷题保持自我成就感&amp;&amp;kmp学了三天明天继续</p><img src="\images\dayliy_image\codepng.png" alt="drawing" width="200"/><p>4.专业课感觉不能拉下，有点兴趣</p><p>5.鞭策自己的目标</p><p>tag1:考完西雅图看虎鲸！</p><p>tag2:考完买仿赛摩托！</p><p>ps:想润去阿美读研工作&amp;&amp;先考，考不上gap</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> casual_talk </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>KMP算法</title>
+      <link href="/2023/05/16/KMP%E7%AE%97%E6%B3%95/"/>
+      <url>/2023/05/16/KMP%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="KMP有什么用"><a href="#KMP有什么用" class="headerlink" title="KMP有什么用"></a>KMP有什么用</h1><p>KMP的主要思想是<strong>当出现字符串不匹配时，可以知道一部分之前已经匹配的文本内容，可以利用这些信息避免从头再去做匹配了。</strong></p><p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/kmp2.png" alt="1684239097493"></p><p>说人话就是上面第二行的<code>f</code>那边不相等</p><p>然后会跳到b那边</p><p>为什么直接跳到b那边了呢？</p><p>那么就往前看它的子字符串：<code>aabaa</code></p><p>子字符串的前缀是<code>aa</code></p><p>子字符串的后缀也是<code>aa</code></p><p>那么就找到这个后缀(aa)与之相等的前缀(aa)的后面(b)重新开始匹配</p><p>(找最长相等前后缀)</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line">a a b a a f</span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">0</span> </span><br><span class="line">因为 f 不同 就找到前面冲突的前一位 <span class="number">2</span></span><br><span class="line">所以再从b开始</span><br></pre></td></tr></table></figure><p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/KMP%E7%B2%BE%E8%AE%B22.gif" alt="KMP精讲"></p><h1 id="什么是前缀表"><a href="#什么是前缀表" class="headerlink" title="什么是前缀表"></a>什么是前缀表</h1><h3 id="什么是前缀"><a href="#什么是前缀" class="headerlink" title="什么是前缀"></a>什么是前缀</h3><p>A:只包含首字母不包含尾字母的<strong>所有</strong>字串</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EX:字符串aabaaf</span><br><span class="line">它的前缀为：</span><br><span class="line">a</span><br><span class="line">aa</span><br><span class="line">aab</span><br><span class="line">aaba</span><br><span class="line">aabaa</span><br></pre></td></tr></table></figure><h3 id="什么是后缀"><a href="#什么是后缀" class="headerlink" title="什么是后缀"></a>什么是后缀</h3><p>A:只包含尾字母不包含首字母的<strong>所有</strong>字符串</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EX:字符串aabaaf</span><br><span class="line">它的后缀为：</span><br><span class="line">f</span><br><span class="line">af</span><br><span class="line">aaf</span><br><span class="line">baaf</span><br><span class="line">avaaf</span><br></pre></td></tr></table></figure><p>next数组就是一个前缀表（prefix table）</p><p><strong>前缀表是用来回退的，它记录了模式串与主串(文本串)不匹配的时候，模式串应该从哪里开始重新匹配。</strong></p><p>什么是前缀表：<strong>记录下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。</strong></p><p>要在文本串：aabaabaafa 中查找</p><p>是否出现过一个模式串：aabaaf。</p><p>​   a a  b a a f</p><p>前缀表就是【0,1,0,1,2,0】</p><h1 id="最长公共前后缀？"><a href="#最长公共前后缀？" class="headerlink" title="最长公共前后缀？"></a>最长公共前后缀？</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a  0</span><br><span class="line">aa 1</span><br><span class="line">aab0</span><br><span class="line">aaba 1</span><br><span class="line">aabaa2</span><br><span class="line">aabaaf  0</span><br></pre></td></tr></table></figure><p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/kmp2.png" alt="1684239097493"></p><h1 id="用next数组表示前缀表"><a href="#用next数组表示前缀表" class="headerlink" title="用next数组表示前缀表"></a>用next数组表示前缀表</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>* next,<span class="type">const</span> <span class="built_in">string</span>&amp; s)</span>&#123;</span><br><span class="line">    <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">    next[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span>&amp;&amp;s[i]!=s[j])&#123;</span><br><span class="line">            j=next[j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s[i]==s[j])&#123;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        next[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="type">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>* next, <span class="type">const</span> <span class="built_in">string</span>&amp; s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> j = <span class="number">-1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; s.size(); i++) &#123; <span class="comment">// 注意i从1开始</span></span><br><span class="line">            <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; s[i] != s[j + <span class="number">1</span>]) &#123; <span class="comment">// 前后缀不相同了</span></span><br><span class="line">                j = next[j]; <span class="comment">// 向前回退</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == s[j + <span class="number">1</span>]) &#123; <span class="comment">// 找到相同的前后缀</span></span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            next[i] = j; <span class="comment">// 将j（前缀的长度）赋给next[i]</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">strStr</span><span class="params">(<span class="built_in">string</span> haystack, <span class="built_in">string</span> needle)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.size() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> next[needle.size()];</span><br><span class="line">        getNext(next, needle);</span><br><span class="line">        <span class="type">int</span> j = <span class="number">-1</span>; <span class="comment">// // 因为next数组里记录的起始位置为-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; haystack.size(); i++) &#123; <span class="comment">// 注意i就从0开始</span></span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; haystack[i] != needle[j + <span class="number">1</span>]) &#123; <span class="comment">// 不匹配</span></span><br><span class="line">                j = next[j]; <span class="comment">// j 寻找之前匹配的位置</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (haystack[i] == needle[j + <span class="number">1</span>]) &#123; <span class="comment">// 匹配，j和i同时向后移动</span></span><br><span class="line">                j++; <span class="comment">// i的增加在for循环里</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j == (needle.size() - <span class="number">1</span>) ) &#123; <span class="comment">// 文本串s里出现了模式串t</span></span><br><span class="line">                <span class="keyword">return</span> (i - needle.size() + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>s[j+1]  j  s[i]</p><p>0    -1   1         (a,a)    next[1]&#x3D;-1 </p><p>1     0   1  (a,b)    j&#x3D;next[0]&#x3D;0</p><p>1     0   2            j&#x3D;next[0]&#x3D;-1 next[2]&#x3D;-1</p><p>13        ()</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> KMP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>28. 找出字符串中第一个匹配项的下标</title>
+      <link href="/2023/05/13/28.-%E6%89%BE%E5%87%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8C%B9%E9%85%8D%E9%A1%B9%E7%9A%84%E4%B8%8B%E6%A0%87/"/>
+      <url>/2023/05/13/28.-%E6%89%BE%E5%87%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8C%B9%E9%85%8D%E9%A1%B9%E7%9A%84%E4%B8%8B%E6%A0%87/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">28. 找出字符串中第一个匹配项的下标</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>剑指 Offer 58 - II. 左旋转字符串</title>
+      <link href="/2023/05/13/%E5%89%91%E6%8C%87-Offer-58---II.-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2023/05/13/%E5%89%91%E6%8C%87-Offer-58---II.-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">剑指 Offer 58 - II. 左旋转字符串</a></p><p>花里胡哨的，真无语</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">string</span> <span class="title function_">reverseLeftWords</span><span class="params">(<span class="built_in">string</span> s, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="type">char</span>&gt; a;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i&lt;s.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;=n)  a.push_back(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i&lt;s.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;n)  a.push_back(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">  </span><br><span class="line">        <span class="built_in">string</span> <span class="title function_">result</span><span class="params">(a.begin(),a.end())</span>;</span><br><span class="line">        <span class="keyword">return</span>  result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class <span class="title function_">Solution</span><span class="params">()</span>&#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">string</span> <span class="title function_">reverseLeftWords</span><span class="params">(<span class="built_in">string</span> s,<span class="type">int</span> n)</span>&#123;</span><br><span class="line">        reverse(s.begin(),s.begin()+n)</span><br><span class="line">        reverse(s.begin()+n,s.end())</span><br><span class="line">        reverse(s.begin(),s.end())</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>151. 反转字符串中的单词</title>
+      <link href="/2023/05/12/151.-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D/"/>
+      <url>/2023/05/12/151.-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">151. 反转字符串中的单词</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">reverse</span><span class="params">(<span class="built_in">string</span>&amp; s,<span class="type">int</span> start,<span class="type">int</span> end)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=start,j=end;i&lt;j;i++,j--)&#123;</span><br><span class="line">        swap(s[i],s[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">removeExtraSpaces</span><span class="params">(<span class="built_in">string</span>&amp; s)</span>&#123;</span><br><span class="line">    <span class="type">int</span> slow=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=<span class="string">&#x27; &#x27;</span>)&#123;<span class="comment">//遇到非空格就处理，即删除所有空格</span></span><br><span class="line">            <span class="keyword">if</span>(slow!=<span class="number">0</span>) s[slow++] =<span class="string">&#x27; &#x27;</span>;<span class="comment">//当slow不是第一个 补一个空格</span></span><br><span class="line">            <span class="keyword">while</span>(i&lt;s.size()&amp;&amp;s[i]!=<span class="string">&#x27; &#x27;</span>)&#123;<span class="comment">//补上单词，遇到空格说明单词结束</span></span><br><span class="line">                s[slow++]=[i++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    s.resize(slow);<span class="comment">//重新搞s的大小</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">string</span> <span class="title function_">reverseWords</span><span class="params">(<span class="built_in">string</span> s)</span>&#123;</span><br><span class="line">removeExtraSpaces(s);</span><br><span class="line">    reverse(s,<span class="number">0</span>,s.size()<span class="number">-1</span>)<span class="comment">//左闭右闭</span></span><br><span class="line">    <span class="type">int</span> start=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=s.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i=s.size() || s[i]==<span class="string">&#x27; &#x27;</span>)&#123;<span class="comment">//一个单词结束</span></span><br><span class="line">            reverse(s,start,i<span class="number">-1</span>);<span class="comment">//反转</span></span><br><span class="line">            start=i+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>剑指 Offer 05. 替换空格</title>
+      <link href="/2023/05/12/%E5%89%91%E6%8C%87-Offer-05.-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/"/>
+      <url>/2023/05/12/%E5%89%91%E6%8C%87-Offer-05.-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">剑指 Offer 05. 替换空格</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> <span class="title function_">replaceSpace</span><span class="params">(<span class="built_in">string</span> s)</span>&#123;</span><br><span class="line"><span class="type">int</span> count=<span class="number">0</span>;<span class="comment">//统计空格的个数</span></span><br><span class="line"><span class="type">int</span> sOldSize = s.size();</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]==<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//扩充字符串s的大小,也就是每个空格替换成&quot;%20&quot;之后的大小</span></span><br><span class="line">    s.resize(s.size()+count*<span class="number">2</span>);</span><br><span class="line">    <span class="type">int</span> sNewSize=s.size();</span><br><span class="line">    <span class="comment">//从后向前将空格替换成&quot;%20&quot;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=sNewSize<span class="number">-1</span>,j=sOldSize<span class="number">-1</span>;j&lt;i;i--,j--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[j]!=<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">            s[i]=s[j];</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            s[i]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            s[i<span class="number">-1</span>]=<span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            s[i<span class="number">-2</span>]=<span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">            i-=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>541.反转字符串 II</title>
+      <link href="/2023/05/11/541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2-II/"/>
+      <url>/2023/05/11/541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2-II/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/reverse-string-ii/">541. 反转字符串 II</a></p><p>reverse is 左闭右开  每隔k个就反转</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> <span class="title function_">reverseStr</span><span class="params">(<span class="built_in">string</span> s,<span class="type">int</span> k)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i&lt;s.size();i+=(<span class="number">2</span>*k))&#123;</span><br><span class="line">        <span class="comment">//每隔2k个字符的前k个字符进行反转</span></span><br><span class="line">        <span class="comment">//剩余字符小于2k 但大于或等于k个,则反转前k个字符</span></span><br><span class="line">       <span class="comment">// abcdefg</span></span><br><span class="line">       <span class="comment">// bacdfeg     </span></span><br><span class="line">       <span class="comment">//0+2&lt;7</span></span><br><span class="line">       <span class="comment">//  reverse 0,2  ba</span></span><br><span class="line">        <span class="comment">// i=4</span></span><br><span class="line">       <span class="comment">//   4+2&lt;=7</span></span><br><span class="line">           <span class="comment">// reverse 4,6 ef</span></span><br><span class="line">        <span class="keyword">if</span>(i+k&lt;=s.size())&#123;</span><br><span class="line">            reverse(s.begin()+i,s.begin()+i+k);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//剩余字符串少于k个,则将剩余字符全部反转</span></span><br><span class="line">            reverse(s.begin()+i,s.end());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>自己写一个左闭右闭的</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">reverse</span><span class="params">(<span class="built_in">string</span>&amp; s,<span class="type">int</span> start,<span class="type">int</span> end)</span>&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=start,j=end;i&lt;j;i++,j--)&#123;</span><br><span class="line">swap(s[i],s[j]);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="built_in">string</span> <span class="title function_">reverseStr</span><span class="params">(<span class="built_in">string</span> s,<span class="type">int</span> k )</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i&lt;s.size();i+=(<span class="number">2</span>*k))&#123;</span><br><span class="line">            <span class="keyword">if</span>(i+k&lt;=s.size())&#123;</span><br><span class="line">                reverse(s,i,i+k<span class="number">-1</span>);</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            reverse(s,i,s.size()<span class="number">-1</span>;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">public:</span><br><span class="line"><span class="type">void</span> <span class="title function_">reverse</span><span class="params">(<span class="built_in">string</span>&amp; s,<span class="type">int</span> start,<span class="type">int</span> end)</span>&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=start,j=end;i&lt;j;i++,j--)&#123;</span><br><span class="line">swap(s[i],s[j]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="built_in">string</span> <span class="title function_">reverseStr</span><span class="params">(<span class="built_in">string</span> s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i&lt;s.size();i+=(<span class="number">2</span>*k))&#123;</span><br><span class="line">            <span class="keyword">if</span>(i+k&lt;=s.size())&#123;</span><br><span class="line">                reverse(s,i,i+k<span class="number">-1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                reverse(s,i,s.size()<span class="number">-1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>344. 反转字符串</title>
+      <link href="/2023/05/11/344.-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2023/05/11/344.-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/reverse-string/">344. 反转字符串</a></p><p><img src="/images/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.gif" alt="反转字符串"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void reverseString(vector&lt;char&gt;&amp; s)&#123;</span><br><span class="line">for(int i=0,j=s.size()-1;i&lt;s.size()/2;i++,j--)&#123;</span><br><span class="line">swap(s[i],s[j]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>18. 四数之和</title>
+      <link href="/2023/05/10/18.-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+      <url>/2023/05/10/18.-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/4sum/">18. 四数之和</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&gt; fourSum(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums,<span class="type">int</span> target)&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">    sort(nums.begin(),nums.end());<span class="comment">//排序</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>;k&lt;nums.size();k++)&#123;</span><br><span class="line">        <span class="comment">//剪枝处理</span></span><br><span class="line">        <span class="keyword">if</span>(nums[k]&gt;target&amp;&amp;num[k]&gt;=<span class="number">0</span>) <span class="keyword">break</span>; <span class="comment">//你这个数都大于target了(前提是这个玩意儿是&gt;0的)</span></span><br><span class="line">        <span class="comment">//对nums[k]去重复</span></span><br><span class="line">        <span class="keyword">if</span>(k&gt;<span class="number">0</span>&amp;&amp;nums[k]==nums[k<span class="number">-1</span>])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = k+<span class="number">1</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">            <span class="comment">//2级剪枝处理</span></span><br><span class="line">            <span class="keyword">if</span>(nums[k]+nums[i]&gt;target&amp;&amp;nums[k]+nums[i]&gt;=<span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">//对nums[i]去重</span></span><br><span class="line">            <span class="keyword">if</span>(i&gt;k+<span class="number">1</span>&amp;&amp;nums[i]==nums[i<span class="number">-1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> left=i+<span class="number">1</span>;</span><br><span class="line">            <span class="type">int</span> right=nums.size()<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">while</span>(right&gt;left)&#123;</span><br><span class="line">                <span class="keyword">if</span>((<span class="type">long</span>)nums[k]+nums[i]+nums[left]+nums[right]&gt;target) right--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>((<span class="type">long</span>)nums[k]+nums[i]+nums[left]+nums[right]&lt;target) left++;</span><br><span class="line">                <span class="keyword">else</span> result.push_back(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&#123;nums[k],nums[i],nums[left],nums[right]&#125;);</span><br><span class="line">                <span class="keyword">while</span>(right&gt;left&amp;&amp;nums[right]==nums[right<span class="number">-1</span>])right--;</span><br><span class="line">                <span class="keyword">while</span>(right&gt;left&amp;&amp;nums[left]==nums[left+<span class="number">1</span>]) left++;</span><br><span class="line">                right--;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 哈希表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>15. 三数之和</title>
+      <link href="/2023/05/09/15.-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+      <url>/2023/05/09/15.-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/3sum/">15. 三数之和</a></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&gt; threeSum(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums)&#123;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">sort(nums.begin(),nums.end());</span><br><span class="line"><span class="comment">//找出a+b+c=0</span></span><br><span class="line"><span class="comment">//a=nums[i],b=nums[left],c=nums[right]</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ;i&lt;nums.size();i++)&#123;</span><br><span class="line">        <span class="comment">//排序之后如果第一个元素已经大于0，那么无论如何都不可能组成三元组了</span></span><br><span class="line">        <span class="keyword">if</span>(nums[i]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//i去重</span></span><br><span class="line">        <span class="keyword">if</span>(i&gt;<span class="number">0</span>&amp;&amp;nums[i]==nums[i<span class="number">-1</span>])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> left=i+<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> right=nums.size()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(right&gt;left)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]+nums[left]+nums[right]&gt;<span class="number">0</span>) right--;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[i]+nums[left]+nums[right]&lt;<span class="number">0</span>) left++;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                result.push_back(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;&#123;nums[i],nums[left],nums[right]&#125;);</span><br><span class="line">                <span class="keyword">while</span>(right&gt;left&amp;&amp;nums[right]==nums[right<span class="number">-1</span>]) right--;</span><br><span class="line">                <span class="keyword">while</span>(right&gt;left&amp;&amp;nums[left]==nums[left+<span class="number">1</span>]) left++;</span><br><span class="line">                right--;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码随想录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 哈希表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>383. 赎金信</title>
       <link href="/2023/05/08/383.-%E8%B5%8E%E9%87%91%E4%BF%A1/"/>
       <url>/2023/05/08/383.-%E8%B5%8E%E9%87%91%E4%BF%A1/</url>
@@ -1758,7 +2008,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#x32;&#x35;&#53;&#x37;&#55;&#x39;&#52;&#x30;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#x38;&#x32;&#x35;&#53;&#x37;&#55;&#x39;&#52;&#x30;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#x38;&#x32;&#x35;&#53;&#55;&#55;&#x39;&#x34;&#x30;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#x38;&#x32;&#x35;&#53;&#55;&#55;&#x39;&#x34;&#x30;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -2142,31 +2392,6 @@
     
     
     <entry>
-      <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
-      <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
-      <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
-      
-        <content type="html"><![CDATA[<h2 id="ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO"><a href="#ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO" class="headerlink" title="ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)"></a>ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)</h2><span id="more"></span><p><img src="/images/jeecgsql/1.png" alt="1672729110392"></p><p><img src="/images/jeecgsql/2.png" alt="1672729176810"></p><p>E:\jeecg\jeecg-boot-master\db\jeecgboot-mysql-5.7.sql</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2023 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>maven 找不到依赖项 javax.servlet:servlet-api:${servlet-api.version}</title>
       <link href="/2023/02/23/maven/"/>
       <url>/2023/02/23/maven/</url>
@@ -2184,6 +2409,31 @@
         <tags>
             
             <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mysql报错ERROR 1045 (28000) Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password:NO)</title>
+      <link href="/2023/02/23/mysql%E5%90%AF%E5%8A%A8/"/>
+      <url>/2023/02/23/mysql%E5%90%AF%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO"><a href="#ERROR-1045-28000-Access-denied-for-user-‘root‘-’localhost’-using-password-NO" class="headerlink" title="ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)"></a>ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: NO)</h2><span id="more"></span><p><img src="/images/jeecgsql/1.png" alt="1672729110392"></p><p><img src="/images/jeecgsql/2.png" alt="1672729176810"></p><p>E:\jeecg\jeecg-boot-master\db\jeecgboot-mysql-5.7.sql</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
             
         </tags>
       
