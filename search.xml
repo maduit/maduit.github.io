@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>拆老姐机子有感</title>
+      <link href="/2023/12/31/%E7%BB%84%E5%8F%B0%E5%BC%8F/"/>
+      <url>/2023/12/31/%E7%BB%84%E5%8F%B0%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h1><h4 id="1-atx-matx-itx"><a href="#1-atx-matx-itx" class="headerlink" title="1.atx matx itx"></a>1.atx matx itx</h4><div ><img src="\images\build_computer\1.png" alt="drawing" width="200" /></div><p>老姐显然用的使ATX</p><h1 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h1><p>不懂但是是</p><p>NVIDIA GeForce GTX 970</p><p>15年左右的神卡</p><h1 id="运行内存"><a href="#运行内存" class="headerlink" title="运行内存"></a>运行内存</h1><p>两张8GB&#x3D;16GB</p><div ><img src="\images\build_computer\2.png" alt="drawing" width="200" /></div><h1 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><p>不懂但是使16年的i7-4790 3.60Ghz</p><h1 id="散热器"><a href="#散热器" class="headerlink" title="散热器"></a>散热器</h1><p>不懂，但是是立式的扎手散热器</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><div ><img src="\images\build_computer\3.png" alt="drawing" width="200" /></div><h1 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h1><p>1.<a href="https://www.microsoft.com/zh-cn/software-download/windows10/%E4%B8%8B%E8%BD%BD">https://www.microsoft.com/zh-cn/software-download/windows10/下载</a></p><p>2.下载到除了桌面的文件里面</p><p>3.双击点开</p><p>4.加载入u盘里（tmd会格式化）</p><p>5.插入（新）电脑</p><p>6.开机狂按F2&#x2F;F1&#x2F;del进入bios</p><p>7.选择优先加载u盘</p><p>8.开机设置</p><p>9.淘宝买了激活码，现在还没解决激活问题，老爸那边没有网线了，等待无线网卡到货</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 装机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>六、暑假作业</title>
       <link href="/2023/07/05/%E5%85%AD%E3%80%81%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/"/>
       <url>/2023/07/05/%E5%85%AD%E3%80%81%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/</url>
@@ -2321,7 +2346,7 @@
       <link href="/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2023/03/05/ERROR%201366%20(HY000)Incorrect%20string%20value%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
       
-        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#50;&#x35;&#x35;&#x37;&#55;&#57;&#52;&#48;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;">&#56;&#50;&#x35;&#x35;&#x37;&#55;&#57;&#52;&#48;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="mailto:&#56;&#x32;&#53;&#53;&#55;&#x37;&#x39;&#x34;&#x30;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#56;&#x32;&#53;&#53;&#55;&#x37;&#x39;&#x34;&#x30;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a> DataError at &#x2F;index&#x2F;add_member 1366, “Incorrect string value: ‘\xE4\xBC\x98\xE</p><h1 id="ERROR-1366-HY000-Incorrect-string-value解决方案"><a href="#ERROR-1366-HY000-Incorrect-string-value解决方案" class="headerlink" title="ERROR 1366 (HY000):Incorrect string value解决方案"></a>ERROR 1366 (HY000):Incorrect string value解决方案</h1><span id="more"></span><p><a href="https://zhuanlan.zhihu.com/p/53941345">https://zhuanlan.zhihu.com/p/53941345</a></p><p><img src="/images/mysql/1.png" alt="1677985811006"></p><p><img src="/images/mysql/2.png" alt="1677985852047"></p><p>after</p><p><img src="/images/mysql/3.png" alt="1677985952688"></p><p>before</p><p><img src="/images/mysql/4.png" alt="1677985979541"></p><p>然后把数据库删除，重新创建数据库，再导入数据库文件，就又是一条好汉</p><p><img src="/images/mysql/5.png" alt="1677988728653"></p><p><img src="/images/mysql/6.png" alt="1677988745809"></p>]]></content>
       
       
       <categories>
@@ -2755,31 +2780,6 @@
     
     
     <entry>
-      <title>PyQt5</title>
-      <link href="/2023/02/23/pyqt5/"/>
-      <url>/2023/02/23/pyqt5/</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装PyQt5"><a href="#安装PyQt5" class="headerlink" title="安装PyQt5"></a>安装PyQt5</h2><p>打开Anaconda Promt，切换到对应环境输入：</p><span id="more"></span> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5 -i https://pypi.douban.com/simple</span><br></pre></td></tr></table></figure><h2 id="安装PyQt5-tools"><a href="#安装PyQt5-tools" class="headerlink" title="安装PyQt5-tools"></a>安装PyQt5-tools</h2> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5-tools -i https://pypi.douban.com/simple</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>打开</p><p>Anaconda prompt</p><p><img src="/./images/pyqt5/1.png" alt="1669202006491"></p><p>输入:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PyQt5-tools designer</span><br></pre></td></tr></table></figure><p>它有很多东西</p><p><img src="/./images/pyqt5/2.png" alt="1669202116133"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">designer</span><br><span class="line">installuic</span><br><span class="line">qmlscene</span><br><span class="line">qmltestrunner</span><br></pre></td></tr></table></figure><p>不知道其他是啥（待解决）</p><hr><p><img src="/./images/pyqt5/3.png" alt="1669202186551"></p><p>直接点击创建（main window）</p><p><img src="/./images/pyqt5/4.png" alt="1669202245388"></p><p>随便拖两个button上去</p><p><img src="/./images/pyqt5/21.png" alt="1669202300112"></p><p>另存为</p><p><img src="/./images/pyqt5/5.png" alt="1669202348711"></p><p>然后回到anaconda那个窗口，</p><p>我们要把这个.ui文件转化为py文件</p><p>方法一：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyQt5.uic.pyuic test.ui -o test.py</span><br></pre></td></tr></table></figure><p><img src="/./images/pyqt5/6.png" alt="1669202702551"></p><p>要切换到相对应的文件夹路径下再运行</p><p><img src="/./images/pyqt5/7.png" alt="1669202755853"></p><p>已经生成了</p><p>方法二：</p><p>太烦了，不写</p><p>F:\anaconda\EMPYTY\pkgs\pyqt-5.9.2-py39hd77b12b_6\Library\bin</p><p>大概在这个路径里面</p><p><img src="/./images/pyqt5/7.1.png" alt="1669203475844"></p><p><img src="/./images/pyqt5/7.2.png" alt="1669203905200"></p><p><img src="/./images/pyqt5/7.3.png" alt="1669203924735"></p><p> 很鸡肋，虽然写的前面的那玩意少了点，但是要吧ui移到当前文件夹里面，辣鸡</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyuic5 test.ui -o test.py</span><br></pre></td></tr></table></figure><p>方法三：<br>直接使用扩展程序打开</p><p>pycharm扩展程序（vscode没找到在哪）</p><p><img src="/./images/pyqt5/8.png" alt="1669203187056"></p><p>不太好搞（不想写，没看懂）</p><p>综上，用方法一</p><p>1.水平布局</p><p><img src="/./images/pyqt5/9.png" alt="1669204341946"></p><p><img src="/./images/pyqt5/10.png" alt="1669204535028"></p><p>回到vscode里面</p><p><img src="/./images/pyqt5/11.png" alt="1669204935069"></p><p><img src="/./images/pyqt5/12.png" alt="1669205119299"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> shuiping</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication,QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建QApplication类的实例</span></span><br><span class="line">app=QApplication(sys.argv)</span><br><span class="line"><span class="comment">#创建一个窗口</span></span><br><span class="line">mainWindow=QMainWindow()</span><br><span class="line"><span class="comment">#向主窗口添加控件</span></span><br><span class="line">ui=shuiping.Ui_MainWindow()</span><br><span class="line">ui.setupUi(mainWindow)</span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainWindow.show()</span><br><span class="line"><span class="comment"># 进入程序的主循环、并通过exit函数确保主循环安全结束</span></span><br><span class="line">sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><p>表单布局</p><p><img src="/./images/pyqt5/13.png" alt="1669206548415"></p><p>垂直布局</p><p><img src="/./images/pyqt5/14.png" alt="1669206597151"></p><p>栅格布局</p><p><img src="/./images/pyqt5/15.png" alt="1669206640854"></p><p>尺寸策略</p><p><img src="/./images/pyqt5/16.png" alt="1669210040330"></p><p>伙伴关系</p><p><img src="/./images/pyqt5/17.png" alt="1669210466222"></p><p>tab顺序</p><p><img src="/./images/pyqt5/18.png" alt="1669210672111"></p><p><img src="/./images/pyqt5/19.png" alt="1669210689346"></p><p>编辑信号和槽</p><p><img src="/./images/pyqt5/22.png" alt="1669211232251"></p><p><img src="/./images/pyqt5/20.png" alt="1669211749552"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 2022 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PyQt5 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>npm install 包，没有报错，提示安装成功，但是项目中没有出现node_modules也没有安装的包</title>
       <link href="/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/"/>
       <url>/2023/02/23/npm%20npm%20install%20hexo-cli%20-g/</url>
@@ -2805,23 +2805,23 @@
     
     
     <entry>
-      <title>之前的博客慢慢再修复，先把最近的东西放上来，sos！</title>
-      <link href="/2023/02/23/breautiful/"/>
-      <url>/2023/02/23/breautiful/</url>
+      <title>PyQt5</title>
+      <link href="/2023/02/23/pyqt5/"/>
+      <url>/2023/02/23/pyqt5/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/saltyfish.png"></p><div style="font-size:40px;color:purple">之前的博客慢慢再修复，先把最近的东西放上来，sos！</div><!-- <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div> -->]]></content>
+        <content type="html"><![CDATA[<h2 id="安装PyQt5"><a href="#安装PyQt5" class="headerlink" title="安装PyQt5"></a>安装PyQt5</h2><p>打开Anaconda Promt，切换到对应环境输入：</p><span id="more"></span> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5 -i https://pypi.douban.com/simple</span><br></pre></td></tr></table></figure><h2 id="安装PyQt5-tools"><a href="#安装PyQt5-tools" class="headerlink" title="安装PyQt5-tools"></a>安装PyQt5-tools</h2> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install PyQt5-tools -i https://pypi.douban.com/simple</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>打开</p><p>Anaconda prompt</p><p><img src="/./images/pyqt5/1.png" alt="1669202006491"></p><p>输入:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PyQt5-tools designer</span><br></pre></td></tr></table></figure><p>它有很多东西</p><p><img src="/./images/pyqt5/2.png" alt="1669202116133"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">designer</span><br><span class="line">installuic</span><br><span class="line">qmlscene</span><br><span class="line">qmltestrunner</span><br></pre></td></tr></table></figure><p>不知道其他是啥（待解决）</p><hr><p><img src="/./images/pyqt5/3.png" alt="1669202186551"></p><p>直接点击创建（main window）</p><p><img src="/./images/pyqt5/4.png" alt="1669202245388"></p><p>随便拖两个button上去</p><p><img src="/./images/pyqt5/21.png" alt="1669202300112"></p><p>另存为</p><p><img src="/./images/pyqt5/5.png" alt="1669202348711"></p><p>然后回到anaconda那个窗口，</p><p>我们要把这个.ui文件转化为py文件</p><p>方法一：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyQt5.uic.pyuic test.ui -o test.py</span><br></pre></td></tr></table></figure><p><img src="/./images/pyqt5/6.png" alt="1669202702551"></p><p>要切换到相对应的文件夹路径下再运行</p><p><img src="/./images/pyqt5/7.png" alt="1669202755853"></p><p>已经生成了</p><p>方法二：</p><p>太烦了，不写</p><p>F:\anaconda\EMPYTY\pkgs\pyqt-5.9.2-py39hd77b12b_6\Library\bin</p><p>大概在这个路径里面</p><p><img src="/./images/pyqt5/7.1.png" alt="1669203475844"></p><p><img src="/./images/pyqt5/7.2.png" alt="1669203905200"></p><p><img src="/./images/pyqt5/7.3.png" alt="1669203924735"></p><p> 很鸡肋，虽然写的前面的那玩意少了点，但是要吧ui移到当前文件夹里面，辣鸡</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyuic5 test.ui -o test.py</span><br></pre></td></tr></table></figure><p>方法三：<br>直接使用扩展程序打开</p><p>pycharm扩展程序（vscode没找到在哪）</p><p><img src="/./images/pyqt5/8.png" alt="1669203187056"></p><p>不太好搞（不想写，没看懂）</p><p>综上，用方法一</p><p>1.水平布局</p><p><img src="/./images/pyqt5/9.png" alt="1669204341946"></p><p><img src="/./images/pyqt5/10.png" alt="1669204535028"></p><p>回到vscode里面</p><p><img src="/./images/pyqt5/11.png" alt="1669204935069"></p><p><img src="/./images/pyqt5/12.png" alt="1669205119299"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> shuiping</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication,QMainWindow</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建QApplication类的实例</span></span><br><span class="line">app=QApplication(sys.argv)</span><br><span class="line"><span class="comment">#创建一个窗口</span></span><br><span class="line">mainWindow=QMainWindow()</span><br><span class="line"><span class="comment">#向主窗口添加控件</span></span><br><span class="line">ui=shuiping.Ui_MainWindow()</span><br><span class="line">ui.setupUi(mainWindow)</span><br><span class="line"><span class="comment"># 显示窗口</span></span><br><span class="line">mainWindow.show()</span><br><span class="line"><span class="comment"># 进入程序的主循环、并通过exit函数确保主循环安全结束</span></span><br><span class="line">sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><p>表单布局</p><p><img src="/./images/pyqt5/13.png" alt="1669206548415"></p><p>垂直布局</p><p><img src="/./images/pyqt5/14.png" alt="1669206597151"></p><p>栅格布局</p><p><img src="/./images/pyqt5/15.png" alt="1669206640854"></p><p>尺寸策略</p><p><img src="/./images/pyqt5/16.png" alt="1669210040330"></p><p>伙伴关系</p><p><img src="/./images/pyqt5/17.png" alt="1669210466222"></p><p>tab顺序</p><p><img src="/./images/pyqt5/18.png" alt="1669210672111"></p><p><img src="/./images/pyqt5/19.png" alt="1669210689346"></p><p>编辑信号和槽</p><p><img src="/./images/pyqt5/22.png" alt="1669211232251"></p><p><img src="/./images/pyqt5/20.png" alt="1669211749552"></p>]]></content>
       
       
       <categories>
           
-          <category> 2023 </category>
+          <category> 2022 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> casual_talk </tag>
+            <tag> PyQt5 </tag>
             
         </tags>
       
@@ -2872,6 +2872,31 @@
         <tags>
             
             <tag> maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>之前的博客慢慢再修复，先把最近的东西放上来，sos！</title>
+      <link href="/2023/02/23/breautiful/"/>
+      <url>/2023/02/23/breautiful/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/saltyfish.png"></p><div style="font-size:40px;color:purple">之前的博客慢慢再修复，先把最近的东西放上来，sos！</div><!-- <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=39807850&cid=69927212&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div> -->]]></content>
+      
+      
+      <categories>
+          
+          <category> 2023 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> casual_talk </tag>
             
         </tags>
       
